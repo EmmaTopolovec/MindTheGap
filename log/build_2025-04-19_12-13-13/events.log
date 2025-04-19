@@ -1,0 +1,620 @@
+[0.000000] (-) TimerEvent: {}
+[0.000727] (my_turtlebot3_gazebo) JobQueued: {'identifier': 'my_turtlebot3_gazebo', 'dependencies': OrderedDict()}
+[0.000807] (train_controller) JobQueued: {'identifier': 'train_controller', 'dependencies': OrderedDict()}
+[0.000880] (train_velocity_plugin) JobQueued: {'identifier': 'train_velocity_plugin', 'dependencies': OrderedDict()}
+[0.000951] (turtlebot3_rl) JobQueued: {'identifier': 'turtlebot3_rl', 'dependencies': OrderedDict()}
+[0.001021] (my_turtlebot3_gazebo) JobStarted: {'identifier': 'my_turtlebot3_gazebo'}
+[0.010575] (train_controller) JobStarted: {'identifier': 'train_controller'}
+[0.018198] (train_velocity_plugin) JobStarted: {'identifier': 'train_velocity_plugin'}
+[0.026659] (turtlebot3_rl) JobStarted: {'identifier': 'turtlebot3_rl'}
+[0.039727] (my_turtlebot3_gazebo) JobProgress: {'identifier': 'my_turtlebot3_gazebo', 'progress': 'cmake'}
+[0.041204] (my_turtlebot3_gazebo) JobProgress: {'identifier': 'my_turtlebot3_gazebo', 'progress': 'build'}
+[0.049660] (my_turtlebot3_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo', '--', '-j4', '-l4'], 'cwd': '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'emma'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/emma'), ('OLDPWD', '/home/emma'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1427'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'emma'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'emma'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', 'OFF'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSU642'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble')]), 'shell': False}
+[0.310059] (-) TimerEvent: {}
+[0.351821] (train_velocity_plugin) JobProgress: {'identifier': 'train_velocity_plugin', 'progress': 'cmake'}
+[0.351986] (train_velocity_plugin) Command: {'cmd': ['/usr/bin/cmake', '/home/emma/turtlebot3_rl_ws/src/train_velocity_plugin', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/train_velocity_plugin'], 'cwd': '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'emma'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/emma'), ('OLDPWD', '/home/emma'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1427'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'emma'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'emma'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', 'OFF'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSU642'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo')]), 'shell': False}
+[0.359426] (my_turtlebot3_gazebo) StdoutLine: {'line': b'[100%] Built target turtlebot3_drive\n'}
+[0.410917] (-) TimerEvent: {}
+[0.513960] (-) TimerEvent: {}
+[0.615946] (-) TimerEvent: {}
+[0.632702] (train_velocity_plugin) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.716066] (-) TimerEvent: {}
+[0.816895] (-) TimerEvent: {}
+[0.853979] (train_velocity_plugin) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.865994] (my_turtlebot3_gazebo) CommandEnded: {'returncode': 0}
+[0.868100] (my_turtlebot3_gazebo) JobProgress: {'identifier': 'my_turtlebot3_gazebo', 'progress': 'install'}
+[0.901029] (my_turtlebot3_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo'], 'cwd': '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'emma'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/emma'), ('OLDPWD', '/home/emma'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1427'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'emma'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'emma'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', 'OFF'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSU642'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble')]), 'shell': False}
+[0.938874] (-) TimerEvent: {}
+[0.939173] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.939520] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.939854] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.939971] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib/my_turtlebot3_gazebo/turtlebot3_drive\n'}
+[0.940052] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/empty_world.launch.py\n'}
+[0.940117] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/robot_state_publisher.launch.py\n'}
+[0.940179] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/spawn_turtlebot3.launch.py\n'}
+[0.955706] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/spawn_turtlebot3_train.launch.py\n'}
+[0.955971] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/train_world.launch.py\n'}
+[0.956052] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_dqn_stage1.launch.py\n'}
+[0.956119] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_dqn_stage2.launch.py\n'}
+[0.956185] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_dqn_stage3.launch.py\n'}
+[0.956247] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_dqn_stage4.launch.py\n'}
+[0.956308] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_house.launch.py\n'}
+[0.956369] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//launch/turtlebot3_world.launch.py\n'}
+[0.956428] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_burger/model-1_4.sdf\n'}
+[0.956487] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_burger/model.config\n'}
+[0.956568] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_burger/model.sdf\n'}
+[0.956667] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/burger_base.dae\n'}
+[0.956759] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/lds.dae\n'}
+[0.956866] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/r200.dae\n'}
+[0.971764] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/tire.dae\n'}
+[0.971977] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/waffle_base.dae\n'}
+[0.972237] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/meshes/waffle_pi_base.dae\n'}
+[0.972454] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_common/model.config\n'}
+[0.972647] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.config\n'}
+[0.972780] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.sdf\n'}
+[0.972847] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.config\n'}
+[0.972907] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.sdf\n'}
+[0.972966] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/model.config\n'}
+[0.973024] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/model.sdf\n'}
+[0.973097] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.config\n'}
+[0.973156] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.sdf\n'}
+[0.973214] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.config\n'}
+[0.986730] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.sdf\n'}
+[0.995797] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/CMakeLists.txt\n'}
+[0.996097] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc\n'}
+[0.996180] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc\n'}
+[0.996247] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc\n'}
+[0.996311] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.config\n'}
+[0.996374] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.sdf\n'}
+[0.996435] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_house/model.config\n'}
+[0.996511] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_house/model.sdf\n'}
+[0.996572] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle/model-1_4.sdf\n'}
+[0.996634] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle/model.config\n'}
+[0.996694] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle/model.sdf\n'}
+[0.996781] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle_pi/model-1_4_.sdf\n'}
+[0.996858] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.config\n'}
+[0.996935] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.sdf\n'}
+[0.996998] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_world/meshes/hexagon.dae\n'}
+[0.997099] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_world/meshes/wall.dae\n'}
+[0.997168] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_world/model-1_4.sdf\n'}
+[0.997231] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_world/model.config\n'}
+[0.997291] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//models/turtlebot3_world/model.sdf\n'}
+[0.997543] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//rviz/tb3_gazebo.rviz\n'}
+[0.997719] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//urdf/common_properties.urdf\n'}
+[0.997890] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//urdf/turtlebot3_burger.urdf\n'}
+[0.997990] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//urdf/turtlebot3_waffle.urdf\n'}
+[0.998142] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//urdf/turtlebot3_waffle_pi.urdf\n'}
+[0.998288] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/empty_world.world\n'}
+[0.998384] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/train_world.world\n'}
+[0.998484] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1.world\n'}
+[0.998646] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2.world\n'}
+[0.998763] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3.world\n'}
+[0.998901] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4.world\n'}
+[0.999039] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_house.world\n'}
+[0.999183] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_world.world\n'}
+[0.999278] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/empty_world.world\n'}
+[0.999366] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/train_world.world\n'}
+[0.999455] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1.world\n'}
+[0.999546] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2.world\n'}
+[0.999638] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3.world\n'}
+[0.999728] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4.world\n'}
+[0.999815] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_house.world\n'}
+[0.999905] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo//worlds/turtlebot3_world.world\n'}
+[1.000011] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/include//turtlebot3_gazebo/turtlebot3_drive.hpp\n'}
+[1.000104] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/ament_index/resource_index/package_run_dependencies/my_turtlebot3_gazebo\n'}
+[1.000194] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/ament_index/resource_index/parent_prefix_path/my_turtlebot3_gazebo\n'}
+[1.005945] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/environment/ament_prefix_path.sh\n'}
+[1.006034] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/environment/ament_prefix_path.dsv\n'}
+[1.006101] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/environment/path.sh\n'}
+[1.006165] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/environment/path.dsv\n'}
+[1.006226] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/local_setup.bash\n'}
+[1.006299] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/local_setup.sh\n'}
+[1.006359] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/local_setup.zsh\n'}
+[1.006419] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/local_setup.dsv\n'}
+[1.006477] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.dsv\n'}
+[1.006536] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/ament_index/resource_index/packages/my_turtlebot3_gazebo\n'}
+[1.006608] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.006668] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.006727] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/cmake/my_turtlebot3_gazeboConfig.cmake\n'}
+[1.006786] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/cmake/my_turtlebot3_gazeboConfig-version.cmake\n'}
+[1.006843] (my_turtlebot3_gazebo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.xml\n'}
+[1.009872] (my_turtlebot3_gazebo) CommandEnded: {'returncode': 0}
+[1.059225] (-) TimerEvent: {}
+[1.066181] (my_turtlebot3_gazebo) JobEnded: {'identifier': 'my_turtlebot3_gazebo', 'rc': 0}
+[1.138599] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.148691] (train_velocity_plugin) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.150937] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.153730] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.163020] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.163190] (-) TimerEvent: {}
+[1.263713] (-) TimerEvent: {}
+[1.318188] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.326384] (train_velocity_plugin) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.326709] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.326826] (train_velocity_plugin) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.337051] (train_velocity_plugin) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.390655] (-) TimerEvent: {}
+[1.462010] (train_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/train_controller', 'build', '--build-base', '/home/emma/turtlebot3_rl_ws/build/train_controller/build', 'install', '--record', '/home/emma/turtlebot3_rl_ws/build/train_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/emma/turtlebot3_rl_ws/src/train_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'emma', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/emma', 'OLDPWD': '/home/emma', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1427', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'emma', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'emma', 'TERM': 'xterm-256color', 'RMW_FASTRTPS_USE_SHM': 'OFF', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LSU642', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/emma/turtlebot3_rl_ws/build/train_controller', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': ':/opt/ros/humble/lib', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/emma/turtlebot3_rl_ws/build/train_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo'}, 'shell': False}
+[1.500907] (turtlebot3_rl) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/turtlebot3_rl', 'build', '--build-base', '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build', 'install', '--record', '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'emma', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/emma', 'OLDPWD': '/home/emma', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1427', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'emma', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'emma', 'TERM': 'xterm-256color', 'RMW_FASTRTPS_USE_SHM': 'OFF', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LSU642', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.98', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': ':/opt/ros/humble/lib', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo'}, 'shell': False}
+[1.501747] (-) TimerEvent: {}
+[1.578962] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.602334] (-) TimerEvent: {}
+[1.730508] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.731262] (-) TimerEvent: {}
+[1.813220] (train_controller) StdoutLine: {'line': b'running egg_info\n'}
+[1.815814] (train_controller) StdoutLine: {'line': b'writing ../../build/train_controller/train_controller.egg-info/PKG-INFO\n'}
+[1.816862] (train_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/train_controller/train_controller.egg-info/dependency_links.txt\n'}
+[1.819802] (train_controller) StdoutLine: {'line': b'writing entry points to ../../build/train_controller/train_controller.egg-info/entry_points.txt\n'}
+[1.821127] (train_controller) StdoutLine: {'line': b'writing requirements to ../../build/train_controller/train_controller.egg-info/requires.txt\n'}
+[1.821555] (train_controller) StdoutLine: {'line': b'writing top-level names to ../../build/train_controller/train_controller.egg-info/top_level.txt\n'}
+[1.825816] (train_controller) StdoutLine: {'line': b"reading manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'\n"}
+[1.827949] (train_controller) StdoutLine: {'line': b"writing manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'\n"}
+[1.828830] (train_controller) StdoutLine: {'line': b'running build\n'}
+[1.829446] (train_controller) StdoutLine: {'line': b'running build_py\n'}
+[1.829586] (train_controller) StdoutLine: {'line': b'running install\n'}
+[1.829656] (train_controller) StdoutLine: {'line': b'running install_lib\n'}
+[1.831460] (train_controller) StdoutLine: {'line': b'running install_data\n'}
+[1.831762] (-) TimerEvent: {}
+[1.832433] (train_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.834969] (train_controller) StdoutLine: {'line': b"removing '/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller-1.0-py3.10.egg-info' (and everything under it)\n"}
+[1.838485] (train_controller) StdoutLine: {'line': b'Copying ../../build/train_controller/train_controller.egg-info to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller-1.0-py3.10.egg-info\n'}
+[1.839512] (train_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[1.850080] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.853903] (turtlebot3_rl) StdoutLine: {'line': b'running egg_info\n'}
+[1.855789] (turtlebot3_rl) StdoutLine: {'line': b'writing ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/PKG-INFO\n'}
+[1.855976] (turtlebot3_rl) StdoutLine: {'line': b'writing dependency_links to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/dependency_links.txt\n'}
+[1.856229] (turtlebot3_rl) StdoutLine: {'line': b'writing entry points to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/entry_points.txt\n'}
+[1.856364] (turtlebot3_rl) StdoutLine: {'line': b'writing requirements to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/requires.txt\n'}
+[1.856457] (turtlebot3_rl) StdoutLine: {'line': b'writing top-level names to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/top_level.txt\n'}
+[1.858117] (turtlebot3_rl) StdoutLine: {'line': b"reading manifest file '../../build/turtlebot3_rl/turtlebot3_rl.egg-info/SOURCES.txt'\n"}
+[1.860818] (turtlebot3_rl) StdoutLine: {'line': b"writing manifest file '../../build/turtlebot3_rl/turtlebot3_rl.egg-info/SOURCES.txt'\n"}
+[1.862243] (turtlebot3_rl) StdoutLine: {'line': b'running build\n'}
+[1.862397] (turtlebot3_rl) StdoutLine: {'line': b'running build_py\n'}
+[1.862470] (turtlebot3_rl) StdoutLine: {'line': b'copying turtlebot3_rl/turtlebot3_env_test2.py -> /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build/lib/turtlebot3_rl\n'}
+[1.863849] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.865678] (turtlebot3_rl) StdoutLine: {'line': b'running install\n'}
+[1.866594] (turtlebot3_rl) StdoutLine: {'line': b'running install_lib\n'}
+[1.866728] (turtlebot3_rl) StdoutLine: {'line': b'copying /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build/lib/turtlebot3_rl/turtlebot3_env_test2.py -> /home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl\n'}
+[1.866906] (turtlebot3_rl) StdoutLine: {'line': b'byte-compiling /home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl/turtlebot3_env_test2.py to turtlebot3_env_test2.cpython-310.pyc\n'}
+[1.870576] (turtlebot3_rl) StdoutLine: {'line': b'running install_data\n'}
+[1.870700] (turtlebot3_rl) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.870764] (turtlebot3_rl) StdoutLine: {'line': b"removing '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.870824] (turtlebot3_rl) StdoutLine: {'line': b'Copying ../../build/turtlebot3_rl/turtlebot3_rl.egg-info to /home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl-0.0.0-py3.10.egg-info\n'}
+[1.870882] (turtlebot3_rl) StdoutLine: {'line': b'running install_scripts\n'}
+[1.882897] (train_controller) StdoutLine: {'line': b'Installing train_control_node script to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/train_controller\n'}
+[1.886196] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.887130] (train_controller) StdoutLine: {'line': b"writing list of installed files to '/home/emma/turtlebot3_rl_ws/build/train_controller/install.log'\n"}
+[1.898808] (turtlebot3_rl) StdoutLine: {'line': b"writing list of installed files to '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log'\n"}
+[1.921842] (train_velocity_plugin) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.928969] (train_controller) CommandEnded: {'returncode': 0}
+[1.934651] (-) TimerEvent: {}
+[1.946496] (train_controller) JobEnded: {'identifier': 'train_controller', 'rc': 0}
+[1.951015] (turtlebot3_rl) CommandEnded: {'returncode': 0}
+[1.966476] (turtlebot3_rl) JobEnded: {'identifier': 'turtlebot3_rl', 'rc': 0}
+[1.969910] (train_velocity_plugin) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.060264] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.060989] (-) TimerEvent: {}
+[2.074469] (train_velocity_plugin) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.161857] (-) TimerEvent: {}
+[2.257731] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.262566] (-) TimerEvent: {}
+[2.293171] (train_velocity_plugin) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.347444] (train_velocity_plugin) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.368484] (-) TimerEvent: {}
+[2.368789] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.472247] (-) TimerEvent: {}
+[2.503074] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.503584] (train_velocity_plugin) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.573701] (-) TimerEvent: {}
+[2.616268] (train_velocity_plugin) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.616530] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.673848] (-) TimerEvent: {}
+[2.721633] (train_velocity_plugin) StdoutLine: {'line': b'-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.758354] (train_velocity_plugin) StdoutLine: {'line': b'-- Found gazebo_dev: 3.9.0 (/opt/ros/humble/share/gazebo_dev/cmake)\n'}
+[2.775788] (-) TimerEvent: {}
+[2.787130] (train_velocity_plugin) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[2.788639] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[2.839697] (train_velocity_plugin) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[2.875889] (-) TimerEvent: {}
+[2.976472] (-) TimerEvent: {}
+[3.036599] (train_velocity_plugin) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[3.077474] (-) TimerEvent: {}
+[3.124711] (train_velocity_plugin) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[3.180721] (train_velocity_plugin) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[3.181081] (-) TimerEvent: {}
+[3.224585] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[3.263557] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[3.274176] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.283602] (-) TimerEvent: {}
+[3.295056] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[3.301552] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[3.301814] (train_velocity_plugin) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[3.306584] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[3.328198] (train_velocity_plugin) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[3.384495] (-) TimerEvent: {}
+[3.399305] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[3.410578] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[3.427766] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[3.436493] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[3.436873] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[3.444179] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[3.445155] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[3.452414] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[3.452660] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[3.459727] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[3.459925] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[3.464488] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[3.465187] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[3.470427] (train_velocity_plugin) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[3.510165] (-) TimerEvent: {}
+[3.590159] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.593694] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[3.594536] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[3.610798] (-) TimerEvent: {}
+[3.617460] (train_velocity_plugin) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[3.629751] (train_velocity_plugin) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[3.636566] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[3.663613] (train_velocity_plugin) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[3.711732] (-) TimerEvent: {}
+[3.733629] (train_velocity_plugin) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[3.743530] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[3.768034] (train_velocity_plugin) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[3.811864] (-) TimerEvent: {}
+[3.833614] (train_velocity_plugin) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[3.840426] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[3.840611] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[3.865032] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.876806] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[3.895924] (train_velocity_plugin) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[3.912545] (-) TimerEvent: {}
+[3.961631] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[3.967758] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[3.968482] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[3.971316] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[3.971436] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[3.972185] (train_velocity_plugin) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[3.996560] (train_velocity_plugin) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[3.999009] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[4.002601] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[4.003446] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[4.004596] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.012546] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[4.012748] (-) TimerEvent: {}
+[4.013506] (train_velocity_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[4.113495] (-) TimerEvent: {}
+[4.147340] (train_velocity_plugin) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[4.170152] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[4.195221] (train_velocity_plugin) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[4.213691] (-) TimerEvent: {}
+[4.258211] (train_velocity_plugin) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[4.266539] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[4.288686] (train_velocity_plugin) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[4.313901] (-) TimerEvent: {}
+[4.342954] (train_velocity_plugin) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[4.345411] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[4.346015] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.347311] (train_velocity_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.357441] (train_velocity_plugin) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[4.358049] (train_velocity_plugin) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[4.381082] (train_velocity_plugin) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[4.414570] (-) TimerEvent: {}
+[4.439529] (train_velocity_plugin) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[4.514796] (-) TimerEvent: {}
+[4.528065] (train_velocity_plugin) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.571706] (train_velocity_plugin) StdoutLine: {'line': b'-- Generating done\n'}
+[4.576113] (train_velocity_plugin) StderrLine: {'line': b'\x1b[33mCMake Warning:\n'}
+[4.576923] (train_velocity_plugin) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[4.577241] (train_velocity_plugin) StderrLine: {'line': b'\n'}
+[4.577310] (train_velocity_plugin) StderrLine: {'line': b'    CATKIN_INSTALL_INTO_PREFIX_ROOT\n'}
+[4.577374] (train_velocity_plugin) StderrLine: {'line': b'\n'}
+[4.577434] (train_velocity_plugin) StderrLine: {'line': b'\x1b[0m\n'}
+[4.581950] (train_velocity_plugin) StdoutLine: {'line': b'-- Build files have been written to: /home/emma/turtlebot3_rl_ws/build/train_velocity_plugin\n'}
+[4.608682] (train_velocity_plugin) CommandEnded: {'returncode': 0}
+[4.609998] (train_velocity_plugin) JobProgress: {'identifier': 'train_velocity_plugin', 'progress': 'build'}
+[4.610053] (train_velocity_plugin) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin', '--', '-j4', '-l4'], 'cwd': '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'emma'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/emma'), ('OLDPWD', '/home/emma'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1427'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'emma'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'emma'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', 'OFF'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSU642'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo')]), 'shell': False}
+[4.615314] (-) TimerEvent: {}
+[4.704627] (train_velocity_plugin) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/train_velocity_plugin.dir/src/train_velocity_plugin.cpp.o\x1b[0m\n'}
+[4.716889] (-) TimerEvent: {}
+[4.819595] (-) TimerEvent: {}
+[4.924677] (-) TimerEvent: {}
+[5.032386] (-) TimerEvent: {}
+[5.133517] (-) TimerEvent: {}
+[5.234701] (-) TimerEvent: {}
+[5.335916] (-) TimerEvent: {}
+[5.436441] (-) TimerEvent: {}
+[5.537034] (-) TimerEvent: {}
+[5.638867] (-) TimerEvent: {}
+[5.740231] (-) TimerEvent: {}
+[5.841194] (-) TimerEvent: {}
+[5.942149] (-) TimerEvent: {}
+[6.042987] (-) TimerEvent: {}
+[6.143796] (-) TimerEvent: {}
+[6.244255] (-) TimerEvent: {}
+[6.362028] (-) TimerEvent: {}
+[6.462546] (-) TimerEvent: {}
+[6.581295] (-) TimerEvent: {}
+[6.730846] (-) TimerEvent: {}
+[6.908823] (-) TimerEvent: {}
+[7.013038] (-) TimerEvent: {}
+[7.113940] (-) TimerEvent: {}
+[7.215968] (-) TimerEvent: {}
+[7.318632] (-) TimerEvent: {}
+[7.421166] (-) TimerEvent: {}
+[7.523172] (-) TimerEvent: {}
+[7.626316] (-) TimerEvent: {}
+[7.744877] (-) TimerEvent: {}
+[7.847148] (-) TimerEvent: {}
+[7.955354] (-) TimerEvent: {}
+[8.064559] (-) TimerEvent: {}
+[8.167558] (-) TimerEvent: {}
+[8.276992] (-) TimerEvent: {}
+[8.382750] (-) TimerEvent: {}
+[8.491813] (-) TimerEvent: {}
+[8.710691] (-) TimerEvent: {}
+[8.842754] (-) TimerEvent: {}
+[8.946963] (-) TimerEvent: {}
+[9.047984] (-) TimerEvent: {}
+[9.197034] (-) TimerEvent: {}
+[9.372273] (-) TimerEvent: {}
+[9.472796] (-) TimerEvent: {}
+[9.652579] (-) TimerEvent: {}
+[9.753605] (-) TimerEvent: {}
+[9.854639] (-) TimerEvent: {}
+[9.960641] (-) TimerEvent: {}
+[10.066426] (-) TimerEvent: {}
+[10.170025] (-) TimerEvent: {}
+[10.275420] (-) TimerEvent: {}
+[10.387694] (-) TimerEvent: {}
+[10.586309] (-) TimerEvent: {}
+[10.699992] (-) TimerEvent: {}
+[10.842026] (-) TimerEvent: {}
+[10.943817] (-) TimerEvent: {}
+[11.046113] (-) TimerEvent: {}
+[11.152550] (-) TimerEvent: {}
+[11.253508] (-) TimerEvent: {}
+[11.355629] (-) TimerEvent: {}
+[11.457370] (-) TimerEvent: {}
+[11.563824] (-) TimerEvent: {}
+[11.669601] (-) TimerEvent: {}
+[11.772466] (-) TimerEvent: {}
+[11.874681] (-) TimerEvent: {}
+[11.975809] (-) TimerEvent: {}
+[12.086592] (-) TimerEvent: {}
+[12.199775] (-) TimerEvent: {}
+[12.301547] (-) TimerEvent: {}
+[12.402057] (-) TimerEvent: {}
+[12.512580] (-) TimerEvent: {}
+[12.614302] (-) TimerEvent: {}
+[12.716307] (-) TimerEvent: {}
+[12.841655] (-) TimerEvent: {}
+[12.946601] (-) TimerEvent: {}
+[13.056494] (-) TimerEvent: {}
+[13.166709] (-) TimerEvent: {}
+[13.267510] (-) TimerEvent: {}
+[13.369053] (-) TimerEvent: {}
+[13.469511] (-) TimerEvent: {}
+[13.571693] (-) TimerEvent: {}
+[13.676449] (-) TimerEvent: {}
+[13.777512] (-) TimerEvent: {}
+[13.899610] (-) TimerEvent: {}
+[14.000652] (-) TimerEvent: {}
+[14.108516] (-) TimerEvent: {}
+[14.211632] (-) TimerEvent: {}
+[14.313568] (-) TimerEvent: {}
+[14.419525] (-) TimerEvent: {}
+[14.527693] (-) TimerEvent: {}
+[14.628529] (-) TimerEvent: {}
+[14.729753] (-) TimerEvent: {}
+[14.834655] (-) TimerEvent: {}
+[14.955583] (-) TimerEvent: {}
+[15.067503] (-) TimerEvent: {}
+[15.168625] (-) TimerEvent: {}
+[15.275459] (-) TimerEvent: {}
+[15.377286] (-) TimerEvent: {}
+[15.486430] (-) TimerEvent: {}
+[15.589019] (-) TimerEvent: {}
+[15.689862] (-) TimerEvent: {}
+[15.791279] (-) TimerEvent: {}
+[15.902628] (-) TimerEvent: {}
+[16.003614] (-) TimerEvent: {}
+[16.105482] (-) TimerEvent: {}
+[16.213643] (-) TimerEvent: {}
+[16.315793] (-) TimerEvent: {}
+[16.416761] (-) TimerEvent: {}
+[16.517571] (-) TimerEvent: {}
+[16.618865] (-) TimerEvent: {}
+[16.720814] (-) TimerEvent: {}
+[16.827501] (-) TimerEvent: {}
+[16.938586] (-) TimerEvent: {}
+[17.042760] (-) TimerEvent: {}
+[17.151865] (-) TimerEvent: {}
+[17.253592] (-) TimerEvent: {}
+[17.364988] (-) TimerEvent: {}
+[17.466499] (-) TimerEvent: {}
+[17.579472] (-) TimerEvent: {}
+[17.689478] (-) TimerEvent: {}
+[17.794746] (-) TimerEvent: {}
+[17.911071] (-) TimerEvent: {}
+[18.018357] (-) TimerEvent: {}
+[18.133464] (-) TimerEvent: {}
+[18.235795] (-) TimerEvent: {}
+[18.337745] (-) TimerEvent: {}
+[18.444810] (-) TimerEvent: {}
+[18.546684] (-) TimerEvent: {}
+[18.649538] (-) TimerEvent: {}
+[18.765732] (-) TimerEvent: {}
+[18.877854] (-) TimerEvent: {}
+[18.983649] (-) TimerEvent: {}
+[19.086688] (-) TimerEvent: {}
+[19.189700] (-) TimerEvent: {}
+[19.295145] (-) TimerEvent: {}
+[19.396730] (-) TimerEvent: {}
+[19.497614] (-) TimerEvent: {}
+[19.598779] (-) TimerEvent: {}
+[19.700224] (-) TimerEvent: {}
+[19.801072] (-) TimerEvent: {}
+[19.917547] (-) TimerEvent: {}
+[20.021477] (-) TimerEvent: {}
+[20.122531] (-) TimerEvent: {}
+[20.223635] (-) TimerEvent: {}
+[20.343483] (-) TimerEvent: {}
+[20.449850] (-) TimerEvent: {}
+[20.554462] (-) TimerEvent: {}
+[20.723887] (-) TimerEvent: {}
+[20.826517] (-) TimerEvent: {}
+[20.932933] (-) TimerEvent: {}
+[21.038997] (-) TimerEvent: {}
+[21.153767] (-) TimerEvent: {}
+[21.265228] (-) TimerEvent: {}
+[21.366712] (-) TimerEvent: {}
+[21.475642] (-) TimerEvent: {}
+[21.584328] (-) TimerEvent: {}
+[21.700268] (-) TimerEvent: {}
+[21.813660] (-) TimerEvent: {}
+[21.915160] (-) TimerEvent: {}
+[22.030283] (-) TimerEvent: {}
+[22.146471] (-) TimerEvent: {}
+[22.248148] (-) TimerEvent: {}
+[22.353556] (-) TimerEvent: {}
+[22.454653] (-) TimerEvent: {}
+[22.556107] (-) TimerEvent: {}
+[22.658148] (-) TimerEvent: {}
+[22.769737] (-) TimerEvent: {}
+[22.871433] (-) TimerEvent: {}
+[22.972797] (-) TimerEvent: {}
+[23.074630] (-) TimerEvent: {}
+[23.182708] (-) TimerEvent: {}
+[23.284841] (-) TimerEvent: {}
+[23.400504] (-) TimerEvent: {}
+[23.501487] (-) TimerEvent: {}
+[23.619084] (-) TimerEvent: {}
+[23.735191] (-) TimerEvent: {}
+[23.838549] (-) TimerEvent: {}
+[23.958186] (-) TimerEvent: {}
+[24.060687] (-) TimerEvent: {}
+[24.165864] (-) TimerEvent: {}
+[24.266844] (-) TimerEvent: {}
+[24.375512] (-) TimerEvent: {}
+[24.478293] (-) TimerEvent: {}
+[24.592645] (-) TimerEvent: {}
+[24.711413] (-) TimerEvent: {}
+[24.815460] (-) TimerEvent: {}
+[24.917032] (-) TimerEvent: {}
+[25.020346] (-) TimerEvent: {}
+[25.134996] (-) TimerEvent: {}
+[25.243483] (-) TimerEvent: {}
+[25.360446] (-) TimerEvent: {}
+[25.461622] (-) TimerEvent: {}
+[25.562633] (-) TimerEvent: {}
+[25.668861] (-) TimerEvent: {}
+[25.787128] (-) TimerEvent: {}
+[25.887871] (-) TimerEvent: {}
+[26.002945] (-) TimerEvent: {}
+[26.115472] (-) TimerEvent: {}
+[26.229645] (-) TimerEvent: {}
+[26.347898] (-) TimerEvent: {}
+[26.465102] (-) TimerEvent: {}
+[26.569864] (-) TimerEvent: {}
+[26.688678] (-) TimerEvent: {}
+[26.789580] (-) TimerEvent: {}
+[26.890147] (-) TimerEvent: {}
+[26.990659] (-) TimerEvent: {}
+[27.091464] (-) TimerEvent: {}
+[27.194600] (-) TimerEvent: {}
+[27.298643] (-) TimerEvent: {}
+[27.405758] (-) TimerEvent: {}
+[27.512514] (-) TimerEvent: {}
+[27.774320] (-) TimerEvent: {}
+[27.875923] (-) TimerEvent: {}
+[27.995830] (-) TimerEvent: {}
+[28.109296] (-) TimerEvent: {}
+[28.212500] (-) TimerEvent: {}
+[28.314548] (-) TimerEvent: {}
+[28.436466] (-) TimerEvent: {}
+[28.549312] (-) TimerEvent: {}
+[28.652349] (-) TimerEvent: {}
+[28.755765] (-) TimerEvent: {}
+[28.857517] (-) TimerEvent: {}
+[28.963614] (-) TimerEvent: {}
+[29.064767] (-) TimerEvent: {}
+[29.166141] (-) TimerEvent: {}
+[29.275455] (-) TimerEvent: {}
+[29.377123] (-) TimerEvent: {}
+[29.485558] (-) TimerEvent: {}
+[29.586956] (-) TimerEvent: {}
+[29.702998] (-) TimerEvent: {}
+[29.917177] (-) TimerEvent: {}
+[30.119925] (-) TimerEvent: {}
+[30.226710] (-) TimerEvent: {}
+[30.327933] (-) TimerEvent: {}
+[30.532365] (-) TimerEvent: {}
+[30.663877] (-) TimerEvent: {}
+[30.765093] (-) TimerEvent: {}
+[30.867465] (-) TimerEvent: {}
+[30.996687] (-) TimerEvent: {}
+[31.152052] (-) TimerEvent: {}
+[31.253532] (-) TimerEvent: {}
+[31.384743] (-) TimerEvent: {}
+[31.623729] (-) TimerEvent: {}
+[31.732713] (-) TimerEvent: {}
+[31.840272] (-) TimerEvent: {}
+[32.040089] (-) TimerEvent: {}
+[32.164928] (-) TimerEvent: {}
+[32.297215] (-) TimerEvent: {}
+[32.409969] (-) TimerEvent: {}
+[32.577963] (-) TimerEvent: {}
+[32.690674] (-) TimerEvent: {}
+[32.796770] (-) TimerEvent: {}
+[32.920604] (-) TimerEvent: {}
+[33.031069] (-) TimerEvent: {}
+[33.135638] (-) TimerEvent: {}
+[33.237353] (-) TimerEvent: {}
+[33.373875] (-) TimerEvent: {}
+[33.474926] (-) TimerEvent: {}
+[33.606137] (-) TimerEvent: {}
+[33.734849] (-) TimerEvent: {}
+[33.856677] (-) TimerEvent: {}
+[33.971747] (-) TimerEvent: {}
+[34.163818] (-) TimerEvent: {}
+[34.280891] (-) TimerEvent: {}
+[34.381268] (-) TimerEvent: {}
+[34.481720] (-) TimerEvent: {}
+[34.583266] (-) TimerEvent: {}
+[34.777647] (-) TimerEvent: {}
+[34.934104] (-) TimerEvent: {}
+[35.035617] (-) TimerEvent: {}
+[35.302921] (-) TimerEvent: {}
+[35.397570] (train_velocity_plugin) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libtrain_velocity_plugin.so\x1b[0m\n'}
+[35.407784] (-) TimerEvent: {}
+[35.508881] (-) TimerEvent: {}
+[35.653863] (-) TimerEvent: {}
+[35.766893] (-) TimerEvent: {}
+[35.885538] (-) TimerEvent: {}
+[36.000013] (-) TimerEvent: {}
+[36.180176] (-) TimerEvent: {}
+[36.273108] (train_velocity_plugin) StdoutLine: {'line': b'[100%] Built target train_velocity_plugin\n'}
+[36.280862] (-) TimerEvent: {}
+[36.293915] (train_velocity_plugin) CommandEnded: {'returncode': 0}
+[36.294980] (train_velocity_plugin) JobProgress: {'identifier': 'train_velocity_plugin', 'progress': 'install'}
+[36.295012] (train_velocity_plugin) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin'], 'cwd': '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'emma'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/emma'), ('OLDPWD', '/home/emma'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1427'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'emma'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'emma'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', 'OFF'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/emma/.local/bin:/home/emma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Ubuntu:@/tmp/.ICE-unix/1386,unix/Ubuntu:/tmp/.ICE-unix/1386'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3434b5c7_3348_4a14_a2c6_0faf645b5ba2'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSU642'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo')]), 'shell': False}
+[36.304543] (train_velocity_plugin) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[36.305317] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/lib/libtrain_velocity_plugin.so\n'}
+[36.312613] (train_velocity_plugin) StdoutLine: {'line': b'-- Set runtime path of "/home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/lib/libtrain_velocity_plugin.so" to ""\n'}
+[36.313636] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/package_run_dependencies/train_velocity_plugin\n'}
+[36.313771] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/parent_prefix_path/train_velocity_plugin\n'}
+[36.313992] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/ament_prefix_path.sh\n'}
+[36.317063] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/ament_prefix_path.dsv\n'}
+[36.317196] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/path.sh\n'}
+[36.317270] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/path.dsv\n'}
+[36.317338] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.bash\n'}
+[36.317443] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.sh\n'}
+[36.317722] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.zsh\n'}
+[36.320213] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.dsv\n'}
+[36.320461] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/package.dsv\n'}
+[36.320542] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/packages/train_velocity_plugin\n'}
+[36.320627] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/cmake/train_velocity_pluginConfig.cmake\n'}
+[36.320706] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/cmake/train_velocity_pluginConfig-version.cmake\n'}
+[36.320770] (train_velocity_plugin) StdoutLine: {'line': b'-- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/package.xml\n'}
+[36.326800] (train_velocity_plugin) CommandEnded: {'returncode': 0}
+[36.349235] (train_velocity_plugin) JobEnded: {'identifier': 'train_velocity_plugin', 'rc': 0}
+[36.351196] (-) EventReactorShutdown: {}

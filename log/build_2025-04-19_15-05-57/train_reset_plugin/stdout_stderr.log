@@ -1,0 +1,241 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found gazebo_dev: 3.9.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'bullet>=2.82'
+--   Found bullet, version 3.05
+-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+-- Found assimp: /usr/include (found version "5.2.0") 
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-transport8 -- found version 8.2.1
+-- Searching for dependencies of ignition-transport8
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.4
+-- Found ZeroMQ: TRUE (Required is at least version "4") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.37.2
+-- Found UUID: TRUE  
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Searching for dependencies of ignition-msgs5
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 9.0.0
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.14.0
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-fuel_tools4 -- found version 4.4.0
+-- Searching for dependencies of ignition-fuel_tools4
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.9.5
+-- Found JSONCPP: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.7.3
+-- Found ZIP: TRUE  
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Gazebo version: 11.10
+-- Checking for module 'tbb'
+--   Found tbb, version 2021.5.0
+-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+-- Configuring done
+-- Generating done
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CATKIN_INSTALL_INTO_PREFIX_ROOT
+
+[0m
+-- Build files have been written to: /home/emma/turtlebot3_rl_ws/build/train_reset_plugin
+[ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::MoveDoors()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:109:79:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Pose3<double>::Pose3(ignition::math::v6::Vector3<double>)[m[K’
+  109 | ft_door_->SetWorldPose(ignition::math::Pose3d(left_final_pos * ratio[01;31m[K)[m[K);
+      |                                                                     [01;31m[K^[m[K
+
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Pose3<T>&) [with T = double][m[K’
+   79 |       public: [01;36m[KPose3[m[K(const Pose3<T> &_pose)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kignition::math::v6::Vector3<double>[m[K’ to ‘[01m[Kconst ignition::math::v6::Pose3<double>&[m[K’
+   79 |       public: Pose3([01;36m[Kconst Pose3<T> &_pose[m[K)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T, T) [with T = double][m[K’
+   72 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T) [with T = double][m[K’
+   59 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Vector3<T>&, const ignition::math::v6::Quaternion<T>&) [with T = double][m[K’
+   47 |       public: [01;36m[KPose3[m[K(const Vector3<T> &_pos, const Quaternion<T> &_rot)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3() [with T = double][m[K’
+   40 |       public: [01;36m[KPose3[m[K() : p(0, 0, 0), q(1, 0, 0, 0)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:110:81:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Pose3<double>::Pose3(ignition::math::v6::Vector3<double>)[m[K’
+  110 | t_door_->SetWorldPose(ignition::math::Pose3d(right_final_pos * ratio[01;31m[K)[m[K);
+      |                                                                     [01;31m[K^[m[K
+
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Pose3<T>&) [with T = double][m[K’
+   79 |       public: [01;36m[KPose3[m[K(const Pose3<T> &_pose)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kignition::math::v6::Vector3<double>[m[K’ to ‘[01m[Kconst ignition::math::v6::Pose3<double>&[m[K’
+   79 |       public: Pose3([01;36m[Kconst Pose3<T> &_pose[m[K)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T, T) [with T = double][m[K’
+   72 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T) [with T = double][m[K’
+   59 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Vector3<T>&, const ignition::math::v6::Quaternion<T>&) [with T = double][m[K’
+   47 |       public: [01;36m[KPose3[m[K(const Vector3<T> &_pos, const Quaternion<T> &_rot)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3() [with T = double][m[K’
+   40 |       public: [01;36m[KPose3[m[K() : p(0, 0, 0), q(1, 0, 0, 0)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:122:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Pose3<double>::Pose3(ignition::math::v6::Vector3<double>)[m[K’
+  122 | t_door_->SetWorldPose(ignition::math::Pose3d(final_pos * (1 - ratio)[01;31m[K)[m[K);
+      |                                                                     [01;31m[K^[m[K
+
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Pose3<T>&) [with T = double][m[K’
+   79 |       public: [01;36m[KPose3[m[K(const Pose3<T> &_pose)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kignition::math::v6::Vector3<double>[m[K’ to ‘[01m[Kconst ignition::math::v6::Pose3<double>&[m[K’
+   79 |       public: Pose3([01;36m[Kconst Pose3<T> &_pose[m[K)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T, T) [with T = double][m[K’
+   72 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T) [with T = double][m[K’
+   59 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Vector3<T>&, const ignition::math::v6::Quaternion<T>&) [with T = double][m[K’
+   47 |       public: [01;36m[KPose3[m[K(const Vector3<T> &_pos, const Quaternion<T> &_rot)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3() [with T = double][m[K’
+   40 |       public: [01;36m[KPose3[m[K() : p(0, 0, 0), q(1, 0, 0, 0)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:123:81:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Pose3<double>::Pose3(ignition::math::v6::Vector3<double>)[m[K’
+  123 | t_door_->SetWorldPose(ignition::math::Pose3d(final_pos * (1 - ratio)[01;31m[K)[m[K);
+      |                                                                     [01;31m[K^[m[K
+
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Pose3<T>&) [with T = double][m[K’
+   79 |       public: [01;36m[KPose3[m[K(const Pose3<T> &_pose)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kignition::math::v6::Vector3<double>[m[K’ to ‘[01m[Kconst ignition::math::v6::Pose3<double>&[m[K’
+   79 |       public: Pose3([01;36m[Kconst Pose3<T> &_pose[m[K)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T, T) [with T = double][m[K’
+   72 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T) [with T = double][m[K’
+   59 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Vector3<T>&, const ignition::math::v6::Quaternion<T>&) [with T = double][m[K’
+   47 |       public: [01;36m[KPose3[m[K(const Vector3<T> &_pos, const Quaternion<T> &_rot)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3() [with T = double][m[K’
+   40 |       public: [01;36m[KPose3[m[K() : p(0, 0, 0), q(1, 0, 0, 0)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

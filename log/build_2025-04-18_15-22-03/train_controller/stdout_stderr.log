@@ -1,0 +1,31 @@
+running develop
+running egg_info
+writing ../../build/train_controller/train_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/train_controller/train_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/train_controller/train_controller.egg-info/entry_points.txt
+writing requirements to ../../build/train_controller/train_controller.egg-info/requires.txt
+writing top-level names to ../../build/train_controller/train_controller.egg-info/top_level.txt
+reading manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/emma/turtlebot3_rl_ws/build/train_controller/build
+creating /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib
+creating /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib/train_controller
+copying train_controller/__init__.py -> /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib/train_controller
+copying train_controller/train_control_node.py -> /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib/train_controller
+running install
+running install_lib
+creating /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller
+copying /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib/train_controller/__init__.py -> /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller
+copying /home/emma/turtlebot3_rl_ws/build/train_controller/build/lib/train_controller/train_control_node.py -> /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller
+byte-compiling /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller/train_control_node.py to train_control_node.cpython-310.pyc
+running install_data
+copying resource/train_controller -> /home/emma/turtlebot3_rl_ws/install/train_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/emma/turtlebot3_rl_ws/install/train_controller/share/train_controller
+running install_egg_info
+Copying ../../build/train_controller/train_controller.egg-info to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller-1.0-py3.10.egg-info
+running install_scripts
+Installing train_control_node script to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/train_controller
+writing list of installed files to '/home/emma/turtlebot3_rl_ws/build/train_controller/install.log'

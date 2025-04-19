@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8df280968052da9692aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "train_velocity_plugin",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "train_velocity_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-train_velocity_plugin-20db098134de17ae89b7.json",
+					"name" : "train_velocity_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "train_velocity_plugin_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-train_velocity_plugin_uninstall-2072d960d633f1480d38.json",
+					"name" : "train_velocity_plugin_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f7c37c3c28f0b2cd2d51.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin",
+		"source" : "/home/emma/turtlebot3_rl_ws/src/train_velocity_plugin"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

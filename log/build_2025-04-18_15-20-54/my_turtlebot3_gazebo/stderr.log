@@ -1,0 +1,7 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo/src/turtlebot3_drive.cpp:17:10:[m[K [01;31m[Kfatal error: [m[Kturtlebot3_gazebo/turtlebot3_drive.hpp: No such file or directory
+   17 | #include [01;31m[K"turtlebot3_gazebo/turtlebot3_drive.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/turtlebot3_drive.dir/build.make:76: CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/turtlebot3_drive.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

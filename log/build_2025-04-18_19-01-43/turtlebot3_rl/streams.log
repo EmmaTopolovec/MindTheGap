@@ -1,0 +1,20 @@
+[5.098s] Invoking command in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_rl build --build-base /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build install --record /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log --single-version-externally-managed install_data
+[5.617s] running egg_info
+[5.651s] writing ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/PKG-INFO
+[5.651s] writing dependency_links to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/dependency_links.txt
+[5.657s] writing entry points to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/entry_points.txt
+[5.657s] writing requirements to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/requires.txt
+[5.657s] writing top-level names to ../../build/turtlebot3_rl/turtlebot3_rl.egg-info/top_level.txt
+[5.717s] reading manifest file '../../build/turtlebot3_rl/turtlebot3_rl.egg-info/SOURCES.txt'
+[5.736s] writing manifest file '../../build/turtlebot3_rl/turtlebot3_rl.egg-info/SOURCES.txt'
+[5.741s] running build
+[5.746s] running build_py
+[5.746s] running install
+[5.746s] running install_lib
+[5.753s] running install_data
+[5.754s] running install_egg_info
+[5.787s] removing '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl-0.0.0-py3.10.egg-info' (and everything under it)
+[5.787s] Copying ../../build/turtlebot3_rl/turtlebot3_rl.egg-info to /home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages/turtlebot3_rl-0.0.0-py3.10.egg-info
+[5.793s] running install_scripts
+[5.998s] writing list of installed files to '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log'
+[6.234s] Invoked command in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl' returned '0': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_rl build --build-base /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build install --record /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log --single-version-externally-managed install_data

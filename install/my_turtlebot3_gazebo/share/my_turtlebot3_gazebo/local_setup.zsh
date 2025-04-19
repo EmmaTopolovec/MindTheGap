@@ -1,0 +1,1 @@
+/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo/ament_cmake_environment_hooks/local_setup.zsh

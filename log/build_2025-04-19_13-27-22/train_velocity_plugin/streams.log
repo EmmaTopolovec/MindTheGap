@@ -1,0 +1,25 @@
+[0.437s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_velocity_plugin -- -j4 -l4
+[0.533s] [ 50%] [32mBuilding CXX object CMakeFiles/train_velocity_plugin.dir/src/train_velocity_plugin.cpp.o[0m
+[31.031s] [100%] [32m[1mLinking CXX shared library libtrain_velocity_plugin.so[0m
+[31.981s] [100%] Built target train_velocity_plugin
+[32.006s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin' returned '0': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_velocity_plugin -- -j4 -l4
+[32.016s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_velocity_plugin
+[32.034s] -- Install configuration: ""
+[32.034s] -- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/lib/libtrain_velocity_plugin.so
+[32.035s] -- Set runtime path of "/home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/lib/libtrain_velocity_plugin.so" to ""
+[32.036s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/package_run_dependencies/train_velocity_plugin
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/parent_prefix_path/train_velocity_plugin
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/ament_prefix_path.sh
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/ament_prefix_path.dsv
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/path.sh
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/environment/path.dsv
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.bash
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.sh
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.zsh
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/local_setup.dsv
+[32.040s] -- Installing: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/package.dsv
+[32.040s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/ament_index/resource_index/packages/train_velocity_plugin
+[32.041s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/cmake/train_velocity_pluginConfig.cmake
+[32.041s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/cmake/train_velocity_pluginConfig-version.cmake
+[32.041s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_velocity_plugin/share/train_velocity_plugin/package.xml
+[32.051s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_velocity_plugin' returned '0': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_velocity_plugin

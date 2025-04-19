@@ -1,0 +1,51 @@
+[0.063s] Invoking command in '/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo/build/my_turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo/install/my_turtlebot3_gazebo
+[0.455s] -- The C compiler identification is GNU 11.4.0
+[0.996s] -- The CXX compiler identification is GNU 11.4.0
+[1.037s] -- Detecting C compiler ABI info
+[1.534s] -- Detecting C compiler ABI info - done
+[1.583s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.588s] -- Detecting C compile features
+[1.588s] -- Detecting C compile features - done
+[1.612s] -- Detecting CXX compiler ABI info
+[2.177s] -- Detecting CXX compiler ABI info - done
+[2.228s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.232s] -- Detecting CXX compile features
+[2.234s] -- Detecting CXX compile features - done
+[2.244s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.447s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.995s] -- Found ros_gz_sim: 0.244.16 (/opt/ros/humble/share/ros_gz_sim/cmake)
+[4.261s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.300s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.354s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.423s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.480s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.782s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.811s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.605s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.831s] -- Found FastRTPS: /opt/ros/humble/include  
+[6.184s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.253s] -- Looking for pthread.h
+[6.809s] -- Looking for pthread.h - found
+[6.810s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.291s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.293s] -- Found Threads: TRUE  
+[7.661s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[7.769s] -- Found nav_msgs: 4.8.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[7.899s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[8.004s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[8.665s] -- Configuring done
+[8.693s] [31mCMake Error at CMakeLists.txt:52 (add_executable):
+[8.696s]   Cannot find source file:
+[8.696s] 
+[8.696s]     src/turtlebot3_drive.cpp
+[8.698s] 
+[8.698s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[8.698s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[8.698s] 
+[8.698s] [0m
+[8.698s] [31mCMake Error at CMakeLists.txt:52 (add_executable):
+[8.698s]   No SOURCES given to target: turtlebot3_drive
+[8.698s] 
+[8.699s] [0m
+[8.703s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[8.753s] Invoked command in '/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo/build/my_turtlebot3_gazebo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo/install/my_turtlebot3_gazebo

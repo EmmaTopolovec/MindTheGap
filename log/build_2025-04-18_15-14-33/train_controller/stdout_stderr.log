@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating train_controller.egg-info
+writing train_controller.egg-info/PKG-INFO
+writing dependency_links to train_controller.egg-info/dependency_links.txt
+writing entry points to train_controller.egg-info/entry_points.txt
+writing requirements to train_controller.egg-info/requires.txt
+writing top-level names to train_controller.egg-info/top_level.txt
+writing manifest file 'train_controller.egg-info/SOURCES.txt'
+reading manifest file 'train_controller.egg-info/SOURCES.txt'
+writing manifest file 'train_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train-controller.egg-link (link to .)
+Installing train_control_node script to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/train_controller
+
+Installed /home/emma/turtlebot3_rl_ws/build/train_controller
+running symlink_data
+creating /home/emma/turtlebot3_rl_ws/install/train_controller/share/ament_index
+creating /home/emma/turtlebot3_rl_ws/install/train_controller/share/ament_index/resource_index
+creating /home/emma/turtlebot3_rl_ws/install/train_controller/share/ament_index/resource_index/packages
+symbolically linking /home/emma/turtlebot3_rl_ws/build/train_controller/resource/train_controller -> /home/emma/turtlebot3_rl_ws/install/train_controller/share/ament_index/resource_index/packages
+symbolically linking /home/emma/turtlebot3_rl_ws/build/train_controller/package.xml -> /home/emma/turtlebot3_rl_ws/install/train_controller/share/train_controller
