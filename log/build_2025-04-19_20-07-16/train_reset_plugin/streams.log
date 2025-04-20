@@ -1,0 +1,25 @@
+[0.416s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.535s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[28.608s] [100%] [32m[1mLinking CXX shared library libtrain_reset_plugin.so[0m
+[29.535s] [100%] Built target train_reset_plugin
+[29.552s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '0': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[29.555s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_reset_plugin
+[29.565s] -- Install configuration: ""
+[29.566s] -- Installing: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/lib/libtrain_reset_plugin.so
+[29.573s] -- Set runtime path of "/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/lib/libtrain_reset_plugin.so" to ""
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/ament_index/resource_index/package_run_dependencies/train_reset_plugin
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/ament_index/resource_index/parent_prefix_path/train_reset_plugin
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/environment/ament_prefix_path.sh
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/environment/ament_prefix_path.dsv
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/environment/path.sh
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/environment/path.dsv
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/local_setup.bash
+[29.573s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/local_setup.sh
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/local_setup.zsh
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/local_setup.dsv
+[29.574s] -- Installing: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.dsv
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/ament_index/resource_index/packages/train_reset_plugin
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/cmake/train_reset_pluginConfig.cmake
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/cmake/train_reset_pluginConfig-version.cmake
+[29.574s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.xml
+[29.579s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '0': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_reset_plugin

@@ -1,0 +1,24 @@
+[0.336s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.706s] [35m[1mConsolidate compiler generated dependencies of target train_reset_plugin[0m
+[0.706s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[17.416s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[17.416s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:90:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetPhysicsEngine[m[K’; did you mean ‘[01m[KSetPhysicsEnabled[m[K’?
+[17.416s]    90 |             train_pos += v * model_->GetWorld()->[01;31m[KGetPhysicsEngine[m[K()->GetMaxStepSize();
+[17.417s]       |                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[17.417s]       |                                                  [32m[KSetPhysicsEnabled[m[K
+[17.417s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:115:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+[17.417s]   115 |                     left_door_link_->[01;31m[KSetPosition[m[K(0, -0.75); // Move door to -0.75
+[17.417s]       |                                      [01;31m[K^~~~~~~~~~~[m[K
+[17.417s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:116:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+[17.417s]   116 |                     right_door_link_->[01;31m[KSetPosition[m[K(0, 0.75); // Move door to 0.75
+[17.417s]       |                                       [01;31m[K^~~~~~~~~~~[m[K
+[17.423s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:135:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+[17.423s]   135 |                     left_door_link_->[01;31m[KSetPosition[m[K(0, 0); // Close door to 0
+[17.423s]       |                                      [01;31m[K^~~~~~~~~~~[m[K
+[17.423s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:136:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+[17.423s]   136 |                     right_door_link_->[01;31m[KSetPosition[m[K(0, 0); // Close door to 0
+[17.423s]       |                                       [01;31m[K^~~~~~~~~~~[m[K
+[22.551s] gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+[22.551s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+[22.552s] gmake: *** [Makefile:146: all] Error 2
+[22.555s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4

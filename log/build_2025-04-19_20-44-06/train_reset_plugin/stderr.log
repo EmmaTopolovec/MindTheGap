@@ -1,0 +1,20 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:90:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetPhysicsEngine[m[K’; did you mean ‘[01m[KSetPhysicsEnabled[m[K’?
+   90 |             train_pos += v * model_->GetWorld()->[01;31m[KGetPhysicsEngine[m[K()->GetMaxStepSize();
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                                                  [32m[KSetPhysicsEnabled[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:115:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+  115 |                     left_door_link_->[01;31m[KSetPosition[m[K(0, -0.75); // Move door to -0.75
+      |                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:116:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+  116 |                     right_door_link_->[01;31m[KSetPosition[m[K(0, 0.75); // Move door to 0.75
+      |                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:135:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+  135 |                     left_door_link_->[01;31m[KSetPosition[m[K(0, 0); // Close door to 0
+      |                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:136:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KSetPosition[m[K’
+  136 |                     right_door_link_->[01;31m[KSetPosition[m[K(0, 0); // Close door to 0
+      |                                       [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

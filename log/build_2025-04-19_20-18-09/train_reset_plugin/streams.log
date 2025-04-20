@@ -1,0 +1,17 @@
+[0.460s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.534s] [35m[1mConsolidate compiler generated dependencies of target train_reset_plugin[0m
+[0.601s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[14.661s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnReset(std_msgs::msg::Empty_<std::allocator<void> >::SharedPtr)[m[K’:
+[14.661s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:51:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrain_link_[m[K’?
+[14.661s]    51 |       [01;31m[Ktrain_link[m[K->SetKinematic(false);
+[14.661s]       |       [01;31m[K^~~~~~~~~~[m[K
+[14.661s]       |       [32m[Ktrain_link_[m[K
+[14.687s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[14.687s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:99:11:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrain_link_[m[K’?
+[14.687s]    99 |           [01;31m[Ktrain_link[m[K->SetKinematic(true);
+[14.687s]       |           [01;31m[K^~~~~~~~~~[m[K
+[14.688s]       |           [32m[Ktrain_link_[m[K
+[20.935s] gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+[20.936s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+[20.937s] gmake: *** [Makefile:146: all] Error 2
+[20.940s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4

@@ -1,0 +1,14 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainControllerPlugin::OnReset(ConstEmptyPtr&)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:38:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmath[m[K’ has not been declared
+   38 |       train->SetWorldPose([01;31m[Kmath[m[K::Pose3d(100, 0, 0, 0, 0, 0));
+      |                           [01;31m[K^~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainControllerPlugin::OnUpdate()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:61:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmath[m[K’ has not been declared
+   61 |           train->SetWorldPose([01;31m[Kmath[m[K::Pose3d(0, 0, 0, 0, 0, 0));
+      |                               [01;31m[K^~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:68:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmath[m[K’ has not been declared
+   68 |           train->SetWorldPose([01;31m[Kmath[m[K::Pose3d(x, 0, 0, 0, 0, 0));
+      |                               [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

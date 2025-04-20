@@ -1,0 +1,7 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kbool gazebo::TrainResetPlugin::IsJointAtTarget(const string&, double)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:142:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::JointController[m[K’ has no member named ‘[01m[KGetErrors[m[K’
+  142 |       auto err = joint_controller_->[01;31m[KGetErrors[m[K()[joint_name];
+      |                                     [01;31m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,72 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:77:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_stime[m[K’?
+   77 |         double t = ([01;31m[Ksim_time[m[K - door_timer_start_).Double();
+      |                     [01;31m[K^~~~~~~~[m[K
+      |                     [32m[Ksi_stime[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:85:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+   85 |           if ([01;31m[Klink_name[m[K == "left_link")
+      |               [01;31m[K^~~~~~~~~[m[K
+      |               [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:86:20:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K->[m[K’ token
+   86 |             link_->[01;31m[K->[m[KSetLinearVel(ignition::math::Vector3d(-speed, 0, 0));
+      |                    [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:87:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+   87 |           if ([01;31m[Klink_name[m[K == "right_link")
+      |               [01;31m[K^~~~~~~~~[m[K
+      |               [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:88:20:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K->[m[K’ token
+   88 |             link_->[01;31m[K->[m[KSetLinearVel(ignition::math::Vector3d(speed, 0, 0));
+      |                    [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:90:41:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KWorldPose[m[K’ in ‘[01m[K* link[m[K’, which is of non-class type ‘[01m[Kint(const char*, const char*) noexcept[m[K’
+   90 |           double moved = std::abs(link->[01;31m[KWorldPose[m[K().Pos().X());
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:92:19:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KSetLinearVel[m[K’ in ‘[01m[K* link[m[K’, which is of non-class type ‘[01m[Kint(const char*, const char*) noexcept[m[K’
+   92 |             link->[01;31m[KSetLinearVel[m[K(ignition::math::Vector3d(0, 0, 0));
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:94:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+   94 |             if ([01;31m[Klink_name[m[K == "left_link")
+      |                 [01;31m[K^~~~~~~~~[m[K
+      |                 [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:96:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+   96 |             if ([01;31m[Klink_name[m[K == "right_link")
+      |                 [01;31m[K^~~~~~~~~[m[K
+      |                 [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:108:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+  108 |           if ([01;31m[Klink_name[m[K == "left_link")
+      |               [01;31m[K^~~~~~~~~[m[K
+      |               [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:109:20:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K->[m[K’ token
+  109 |             link_->[01;31m[K->[m[KSetLinearVel(ignition::math::Vector3d(speed, 0, 0));
+      |                    [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:110:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+  110 |           if ([01;31m[Klink_name[m[K == "right_link")
+      |               [01;31m[K^~~~~~~~~[m[K
+      |               [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:111:20:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K->[m[K’ token
+  111 |             link_->[01;31m[K->[m[KSetLinearVel(ignition::math::Vector3d(-speed, 0, 0));
+      |                    [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:113:41:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KWorldPose[m[K’ in ‘[01m[K* link[m[K’, which is of non-class type ‘[01m[Kint(const char*, const char*) noexcept[m[K’
+  113 |           double moved = std::abs(link->[01;31m[KWorldPose[m[K().Pos().X());
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:115:19:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KSetLinearVel[m[K’ in ‘[01m[K* link[m[K’, which is of non-class type ‘[01m[Kint(const char*, const char*) noexcept[m[K’
+  115 |             link->[01;31m[KSetLinearVel[m[K(ignition::math::Vector3d(0, 0, 0));
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:117:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+  117 |             if ([01;31m[Klink_name[m[K == "left_link")
+      |                 [01;31m[K^~~~~~~~~[m[K
+      |                 [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:119:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klink_name[m[K’ was not declared in this scope; did you mean ‘[01m[Klink_name_[m[K’?
+  119 |             if ([01;31m[Klink_name[m[K == "right_link")
+      |                 [01;31m[K^~~~~~~~~[m[K
+      |                 [32m[Klink_name_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:122:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kdoors_active_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdoor_state_[m[K’?
+  122 |             [01;31m[Kdoors_active_[m[K = false;
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+      |             [32m[Kdoor_state_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:152:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_stime[m[K’?
+  152 |           door_timer_start_ = [01;31m[Ksim_time[m[K;
+      |                               [01;31m[K^~~~~~~~[m[K
+      |                               [32m[Ksi_stime[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

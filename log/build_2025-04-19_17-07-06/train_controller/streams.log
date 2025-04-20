@@ -1,0 +1,21 @@
+[1.702s] Invoking command in '/home/emma/turtlebot3_rl_ws/src/train_controller': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/train_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/train_controller build --build-base /home/emma/turtlebot3_rl_ws/build/train_controller/build install --record /home/emma/turtlebot3_rl_ws/build/train_controller/install.log --single-version-externally-managed install_data
+[2.297s] running egg_info
+[2.302s] writing ../../build/train_controller/train_controller.egg-info/PKG-INFO
+[2.302s] writing dependency_links to ../../build/train_controller/train_controller.egg-info/dependency_links.txt
+[2.302s] writing entry points to ../../build/train_controller/train_controller.egg-info/entry_points.txt
+[2.303s] writing requirements to ../../build/train_controller/train_controller.egg-info/requires.txt
+[2.304s] writing top-level names to ../../build/train_controller/train_controller.egg-info/top_level.txt
+[2.318s] reading manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'
+[2.318s] writing manifest file '../../build/train_controller/train_controller.egg-info/SOURCES.txt'
+[2.319s] running build
+[2.319s] running build_py
+[2.319s] running install
+[2.319s] running install_lib
+[2.320s] running install_data
+[2.320s] running install_egg_info
+[2.325s] removing '/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller-1.0-py3.10.egg-info' (and everything under it)
+[2.329s] Copying ../../build/train_controller/train_controller.egg-info to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages/train_controller-1.0-py3.10.egg-info
+[2.331s] running install_scripts
+[2.389s] Installing train_control_node script to /home/emma/turtlebot3_rl_ws/install/train_controller/lib/train_controller
+[2.389s] writing list of installed files to '/home/emma/turtlebot3_rl_ws/build/train_controller/install.log'
+[2.454s] Invoked command in '/home/emma/turtlebot3_rl_ws/src/train_controller' returned '0': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/train_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/train_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/train_controller build --build-base /home/emma/turtlebot3_rl_ws/build/train_controller/build install --record /home/emma/turtlebot3_rl_ws/build/train_controller/install.log --single-version-externally-managed install_data
