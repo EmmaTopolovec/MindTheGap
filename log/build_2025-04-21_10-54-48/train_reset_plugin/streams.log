@@ -1,0 +1,15 @@
+[0.401s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.498s] [35m[1mConsolidate compiler generated dependencies of target train_reset_plugin[0m
+[0.581s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[12.607s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::TrainResetPlugin::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’:
+[12.608s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:85:14:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgazebo::TrainResetPlugin::OnReset()[m[K’
+[12.608s]    85 |       [01;31m[KOnReset()[m[K;
+[12.608s]       |       [01;31m[K~~~~~~~^~[m[K
+[12.608s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:88:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid gazebo::TrainResetPlugin::OnReset(std_msgs::msg::Empty_<std::allocator<void> >::SharedPtr)[m[K’
+[12.608s]    88 |     void [01;36m[KOnReset[m[K(const std_msgs::msg::Empty::SharedPtr /*msg*/)
+[12.608s]       |          [01;36m[K^~~~~~~[m[K
+[12.608s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:88:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[18.267s] gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+[18.268s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+[18.269s] gmake: *** [Makefile:146: all] Error 2
+[18.274s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4

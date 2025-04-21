@@ -1,0 +1,11 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::SetLinkState(const LinkPtr&, bool)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:22:12:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::pair<const unsigned int, gazebo::msgs::Visual>[m[K’
+   22 |         vis[01;31m[K->[m[KSetVisible(enable);
+      |            [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KGetCollisionCount[m[K’; did you mean ‘[01m[KGetCollisionById[m[K’?
+   25 |       for (unsigned int i = 0; i < link->[01;31m[KGetCollisionCount[m[K(); ++i)
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                          [32m[KGetCollisionById[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

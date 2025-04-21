@@ -1,0 +1,47 @@
+[35m[1mConsolidate compiler generated dependencies of target train_reset_plugin[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::SetLinkState(const LinkPtr&, bool)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:22:12:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd::pair<const unsigned int, gazebo::msgs::Visual>[m[K’
+   22 |         vis[01;31m[K->[m[KSetVisible(enable);
+      |            [01;31m[K^~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KGetCollisionCount[m[K’; did you mean ‘[01m[KGetCollisionById[m[K’?
+   25 |       for (unsigned int i = 0; i < link->[01;31m[KGetCollisionCount[m[K(); ++i)
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                          [32m[KGetCollisionById[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnReset(std_msgs::msg::Empty_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:87:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolid_train_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolid_train_link_[m[K’?
+   87 |       SetLinkState([01;31m[Ksolid_train_link[m[K, true);
+      |                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                    [32m[Ksolid_train_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:88:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrain_link_[m[K’?
+   88 |       SetLinkState([01;31m[Ktrain_link[m[K, false);
+      |                    [01;31m[K^~~~~~~~~~[m[K
+      |                    [32m[Ktrain_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:89:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_door_link[m[K’ was not declared in this scope; did you mean ‘[01m[Kleft_door_link_[m[K’?
+   89 |       SetLinkState([01;31m[Kleft_door_link[m[K, false);
+      |                    [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                    [32m[Kleft_door_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:90:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_door_link[m[K’ was not declared in this scope; did you mean ‘[01m[Kright_door_link_[m[K’?
+   90 |       SetLinkState([01;31m[Kright_door_link[m[K, false);
+      |                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                    [32m[Kright_door_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:117:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolid_train_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolid_train_link_[m[K’?
+  117 |           SetLinkState([01;31m[Ksolid_train_link[m[K, false);
+      |                        [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                        [32m[Ksolid_train_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:118:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrain_link_[m[K’?
+  118 |           SetLinkState([01;31m[Ktrain_link[m[K, true);
+      |                        [01;31m[K^~~~~~~~~~[m[K
+      |                        [32m[Ktrain_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:119:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_door_link[m[K’ was not declared in this scope; did you mean ‘[01m[Kleft_door_link_[m[K’?
+  119 |           SetLinkState([01;31m[Kleft_door_link[m[K, true);
+      |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                        [32m[Kleft_door_link_[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:120:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_door_link[m[K’ was not declared in this scope; did you mean ‘[01m[Kright_door_link_[m[K’?
+  120 |           SetLinkState([01;31m[Kright_door_link[m[K, true);
+      |                        [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                        [32m[Kright_door_link_[m[K
+gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

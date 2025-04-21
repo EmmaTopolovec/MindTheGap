@@ -17,18 +17,21 @@
 
     <include>
       <uri>model://train</uri>
+      <name>train</name>
       <pose>0 0 0 0 0 0</pose> 
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://left</uri>
-      <pose>0 0 0 0 0 0</pose>
+      <name>left</name>
+      <pose>0 -0.007 0.01 0 0 0</pose>
     </include>
 
     <include>
       <uri>model://right</uri>
-      <pose>0 0 0 0 0 0</pose>
-    </include>
+      <name>right</name>
+      <pose>0 -0.007 0.01 0 0 0</pose>
+    </include> -->
 
     <scene>
       <shadows>false</shadows>
@@ -41,8 +44,6 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-
-    <plugin name="train_reset_plugin" filename="libtrain_reset_plugin.so"/>
 
     <!-- <physics type="ode">
       <real_time_update_rate>1000.0</real_time_update_rate>
