@@ -3,6 +3,7 @@
 #include <gazebo/physics/physics.hh>
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/empty.hpp>
+#include "std_msgs/msg/bool.hpp"
 #include <thread>
 
 namespace gazebo
@@ -54,6 +55,9 @@ namespace gazebo
 
       ros_node_ = std::make_shared<rclcpp::Node>("train_reset_plugin_node");
 
+      train_leaving_pub_ = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/leaving", 10);
+      collision_pub_ = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/collision", 10);
+
       // Get links
       solid_train_link_ = model_->GetLink("solid_train_link");
       train_link_ = model_->GetLink("train_link");
@@ -70,16 +74,16 @@ namespace gazebo
       MoveUp(left_door_link_);
       MoveUp(right_door_link_);
 
-      DisableCollisions(train_link_);
-      DisableCollisions(left_door_link_);
-      DisableCollisions(right_door_link_);
+      // DisableCollisions(train_link_);
+      // DisableCollisions(left_door_link_);
+      // DisableCollisions(right_door_link_);
 
       train_link_->SetKinematic(true);
       left_door_link_->SetKinematic(true);
       right_door_link_->SetKinematic(true);
 
       solid_train_link_->SetKinematic(false);
-      EnableCollisions(solid_train_link_);
+      // EnableCollisions(solid_train_link_);
 
       reset_sub_ = ros_node_->create_subscription<std_msgs::msg::Empty>(
         "/train/reset", 10,
@@ -104,16 +108,16 @@ namespace gazebo
       MoveUp(left_door_link_);
       MoveUp(right_door_link_);
 
-      DisableCollisions(train_link_);
-      DisableCollisions(left_door_link_);
-      DisableCollisions(right_door_link_);
+      // DisableCollisions(train_link_);
+      // DisableCollisions(left_door_link_);
+      // DisableCollisions(right_door_link_);
 
       train_link_->SetKinematic(true);
       left_door_link_->SetKinematic(true);
       right_door_link_->SetKinematic(true);
 
       solid_train_link_->SetKinematic(false);
-      EnableCollisions(solid_train_link_);
+      // EnableCollisions(solid_train_link_);
 
       // Move solid_train to x = 100 and start movement
       solid_train_link_->SetWorldPose(ignition::math::Pose3d(100.0, 0, 0, 0, 0, 0));
@@ -124,12 +128,36 @@ namespace gazebo
       RCLCPP_INFO(ros_node_->get_logger(), "Reset triggered. Solid train starting movement.");
     }
 
+    void CheckForCollision(const char* link_name) {
+      // Get the collision object (ensure you have the correct collision pointer)
+      auto collision = this->model_->GetLink(link_name)->GetCollision("collision");
+
+      // Get the state of the collision
+      auto collision_state = collision->GetState();
+
+      // Check if the collision is active (not zero)
+      if (!collision_state.IsZero())
+      {
+          std_msgs::msg::Bool msg;
+          msg.data = true;  // Collision detected
+          collision_pub_->publish(msg);
+      }
+      else
+      {
+          std_msgs::msg::Bool msg;
+          msg.data = false;  // No collision detected
+          collision_pub_->publish(msg);
+      }
+    }
+
     void OnUpdate()
     {
       auto sim_time = model_->GetWorld()->SimTime();
 
       if (solid_train_active_)
       {
+        CheckForCollision("solid_train_link");
+        
         auto current_time = model_->GetWorld()->SimTime();
         double elapsed = (current_time - start_time_).Double();
         double v = -(x_velocity_ + deceleration_ * elapsed);
@@ -143,25 +171,27 @@ namespace gazebo
           solid_train_link_->SetWorldPose({0, 0, 0, 0, 0, 0});
           
           MoveUp(solid_train_link_);
-          DisableCollisions(solid_train_link_);
+          // DisableCollisions(solid_train_link_);
           solid_train_link_->SetKinematic(true);
 
           // Show stationary train
           train_link_->SetWorldPose({0, 0, 0, 0, 0, 0});
+          train_link_->SetLinearVel({0, 0, 0});
           left_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
           right_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
 
           train_link_->SetKinematic(true);
           left_door_link_->SetKinematic(false);
           right_door_link_->SetKinematic(false);
-          EnableCollisions(train_link_);
-          EnableCollisions(left_door_link_);
-          EnableCollisions(right_door_link_);
+          // EnableCollisions(train_link_);
+          // EnableCollisions(left_door_link_);
+          // EnableCollisions(right_door_link_);
 
           door_state_ = 1;
           door_timer_start_ = sim_time;
 
           solid_train_active_ = false;
+
           RCLCPP_INFO(ros_node_->get_logger(), "Solid train arrived. Switching to kinematic train and starting door sequence.");
         }
         return;
@@ -170,6 +200,10 @@ namespace gazebo
       // Door animation logic
       if (door_state_ > 0)
       {
+        CheckForCollision("train_link");
+        CheckForCollision("left_link");
+        CheckForCollision("right_link");
+
         double t = (sim_time - door_timer_start_).Double();
         double speed = 0.25;
 
@@ -214,6 +248,10 @@ namespace gazebo
 
             door_state_ = 0;
             RCLCPP_INFO(ros_node_->get_logger(), "Doors closed. Sequence complete.");
+
+            std_msgs::msg::Bool msg;
+            msg.data = true;
+            train_leaving_pub_->publish(msg);
           }
         }
         else
@@ -234,6 +272,8 @@ namespace gazebo
   private:
     rclcpp::Node::SharedPtr ros_node_;
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr reset_sub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr train_leaving_pub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr collision_pub_;
     std::shared_ptr<std::thread> ros_spin_thread_;
 
     physics::ModelPtr model_;

@@ -33,10 +33,6 @@ def generate_launch_description():
         'model.sdf'
     )
 
-    # Randomize starting x and y
-    x_pose = random.uniform(10, 81.75)
-    y_pose = random.uniform(-2.5, -0.5)
-
     # Declare the launch arguments
     declare_x_position_cmd = DeclareLaunchArgument(
         'x_pose', default_value='0.0',
@@ -52,9 +48,9 @@ def generate_launch_description():
         arguments=[
             '-entity', TURTLEBOT3_MODEL,
             '-file', urdf_path,
-            '-x', f"{x_pose}",
-            '-y', f"{y_pose}",
-            '-z', '1.16'
+            '-x', "-10.0",
+            '-y', "-10.0",
+            '-z', '0.1'
         ],
         output='screen',
     )

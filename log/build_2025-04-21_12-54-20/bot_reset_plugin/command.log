@@ -1,0 +1,4 @@
+Invoking command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/bot_reset_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin
+Invoked command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin' returned '0': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/bot_reset_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin
+Invoking command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4
+Invoked command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4

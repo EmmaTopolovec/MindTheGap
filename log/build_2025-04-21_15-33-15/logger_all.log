@@ -1,0 +1,322 @@
+[0.129s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.129s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7e81fa50fd00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e81fa50eec0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e81fa50eec0>>)
+[0.327s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.328s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.328s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/emma/turtlebot3_rl_ws'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/bot_reset_plugin) by extension 'ros'
+[0.346s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bot_reset_plugin' with type 'ros.catkin' and name 'bot_reset_plugin'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extensions ['colcon_pkg']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extension 'colcon_pkg'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extensions ['colcon_meta']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extension 'colcon_meta'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extensions ['ros']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_turtlebot3_gazebo) by extension 'ros'
+[0.348s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_turtlebot3_gazebo' with type 'ros.ament_cmake' and name 'my_turtlebot3_gazebo'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/train_reset_plugin) by extension 'ros'
+[0.350s] DEBUG:colcon.colcon_core.package_identification:Package 'src/train_reset_plugin' with type 'ros.catkin' and name 'train_reset_plugin'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_rl) by extension 'ros'
+[0.352s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_rl' with type 'ros.ament_python' and name 'turtlebot3_rl'
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.383s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.386s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/emma/turtlebot3_rl_ws/install
+[0.388s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 295 installed packages in /opt/ros/humble
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.433s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_target' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'bot_reset_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.434s] DEBUG:colcon.colcon_core.verb:Building package 'bot_reset_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin', 'merge_install': False, 'path': '/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin', 'symlink_install': False, 'test_result_base': None}
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'my_turtlebot3_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'my_turtlebot3_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo', 'merge_install': False, 'path': '/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'train_reset_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'train_reset_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin', 'merge_install': False, 'path': '/home/emma/turtlebot3_rl_ws/src/train_reset_plugin', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_rl' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_rl' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl', 'merge_install': False, 'path': '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl', 'symlink_install': False, 'test_result_base': None}
+[0.436s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.438s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.438s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin' with build type 'catkin'
+[0.438s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin'
+[0.442s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.443s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.443s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.447s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo' with build type 'ament_cmake'
+[0.448s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emma/turtlebot3_rl_ws/src/my_turtlebot3_gazebo'
+[0.448s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.448s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.454s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/emma/turtlebot3_rl_ws/src/train_reset_plugin' with build type 'catkin'
+[0.454s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emma/turtlebot3_rl_ws/src/train_reset_plugin'
+[0.454s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.455s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.459s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl' with build type 'ament_python'
+[0.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_rl', 'ament_prefix_path')
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/ament_prefix_path.ps1'
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/ament_prefix_path.dsv'
+[0.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/ament_prefix_path.sh'
+[0.463s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.463s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4
+[0.499s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo': CMAKE_PREFIX_PATH=/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo -- -j4 -l4
+[0.513s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.871s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl'
+[0.878s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.878s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '0': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_reset_plugin
+[0.930s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo -- -j4 -l4
+[0.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo': CMAKE_PREFIX_PATH=/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo
+[0.953s] Level 1:colcon.colcon_core.shell:create_environment_hook('train_reset_plugin', 'ros_package_path')
+[0.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ros_package_path.ps1'
+[0.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '0': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/train_reset_plugin
+[0.960s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ros_package_path.dsv'
+[0.960s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ros_package_path.sh'
+[0.962s] Level 1:colcon.colcon_core.shell:create_environment_hook('train_reset_plugin', 'pkg_config_path')
+[0.962s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path.ps1'
+[0.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path.dsv'
+[0.964s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path.sh'
+[0.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('train_reset_plugin', 'pkg_config_path_multiarch')
+[0.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path_multiarch.ps1'
+[0.979s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path_multiarch.dsv'
+[0.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/pkg_config_path_multiarch.sh'
+[0.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(train_reset_plugin)
+[1.004s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin' for CMake module files
+[1.005s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin' for CMake config files
+[1.005s] Level 1:colcon.colcon_core.shell:create_environment_hook('train_reset_plugin', 'cmake_prefix_path')
+[1.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/cmake_prefix_path.ps1'
+[1.006s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/cmake_prefix_path.dsv'
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/cmake_prefix_path.sh'
+[1.019s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/lib'
+[1.019s] Level 1:colcon.colcon_core.shell:create_environment_hook('train_reset_plugin', 'ld_library_path_lib')
+[1.020s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ld_library_path_lib.ps1'
+[1.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ld_library_path_lib.dsv'
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/hook/ld_library_path_lib.sh'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/bin'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/lib/pkgconfig/train_reset_plugin.pc'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/lib/python3.10/site-packages'
+[1.042s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/bin'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.ps1'
+[1.044s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.dsv'
+[1.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.sh'
+[1.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.bash'
+[1.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/train_reset_plugin/package.zsh'
+[1.075s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emma/turtlebot3_rl_ws/install/train_reset_plugin/share/colcon-core/packages/train_reset_plugin)
+[1.082s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_turtlebot3_gazebo)
+[1.083s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo' for CMake module files
+[1.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl:/home/emma/turtlebot3_rl_ws/install/train_controller:/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/my_turtlebot3_gazebo
+[1.088s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo' for CMake config files
+[1.089s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_turtlebot3_gazebo', 'cmake_prefix_path')
+[1.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.ps1'
+[1.094s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.dsv'
+[1.098s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.sh'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/bin'
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib/pkgconfig/my_turtlebot3_gazebo.pc'
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib/python3.10/site-packages'
+[1.123s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/bin'
+[1.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.ps1'
+[1.125s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.dsv'
+[1.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.sh'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.bash'
+[1.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.zsh'
+[1.151s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/colcon-core/packages/my_turtlebot3_gazebo)
+[1.161s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_turtlebot3_gazebo)
+[1.162s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo' for CMake module files
+[1.163s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo' for CMake config files
+[1.163s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_turtlebot3_gazebo', 'cmake_prefix_path')
+[1.163s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.ps1'
+[1.165s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.dsv'
+[1.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/hook/cmake_prefix_path.sh'
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib'
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/bin'
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib/pkgconfig/my_turtlebot3_gazebo.pc'
+[1.172s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/lib/python3.10/site-packages'
+[1.174s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/bin'
+[1.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.ps1'
+[1.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.dsv'
+[1.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.sh'
+[1.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.bash'
+[1.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/my_turtlebot3_gazebo/package.zsh'
+[1.185s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emma/turtlebot3_rl_ws/install/my_turtlebot3_gazebo/share/colcon-core/packages/my_turtlebot3_gazebo)
+[1.495s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_rl build --build-base /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build install --record /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log --single-version-externally-managed install_data
+[2.151s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl' for CMake module files
+[2.152s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/src/turtlebot3_rl' returned '0': PYTHONPATH=/home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_rl build --build-base /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/build install --record /home/emma/turtlebot3_rl_ws/build/turtlebot3_rl/install.log --single-version-externally-managed install_data
+[2.154s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl' for CMake config files
+[2.155s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib'
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/bin'
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/pkgconfig/turtlebot3_rl.pc'
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/lib/python3.10/site-packages'
+[2.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_rl', 'pythonpath')
+[2.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/pythonpath.ps1'
+[2.159s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/pythonpath.dsv'
+[2.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/hook/pythonpath.sh'
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/bin'
+[2.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_rl)
+[2.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/package.ps1'
+[2.164s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/package.dsv'
+[2.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/package.sh'
+[2.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/package.bash'
+[2.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/turtlebot3_rl/package.zsh'
+[2.171s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emma/turtlebot3_rl_ws/install/turtlebot3_rl/share/colcon-core/packages/turtlebot3_rl)
+[5.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4
+[5.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('bot_reset_plugin', 'ros_package_path')
+[5.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ros_package_path.ps1'
+[5.012s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ros_package_path.dsv'
+[5.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ros_package_path.sh'
+[5.015s] Level 1:colcon.colcon_core.shell:create_environment_hook('bot_reset_plugin', 'pkg_config_path')
+[5.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path.ps1'
+[5.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path.dsv'
+[5.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path.sh'
+[5.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('bot_reset_plugin', 'pkg_config_path_multiarch')
+[5.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path_multiarch.ps1'
+[5.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path_multiarch.dsv'
+[5.019s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/pkg_config_path_multiarch.sh'
+[5.020s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bot_reset_plugin)
+[5.020s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin' for CMake module files
+[5.021s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin' for CMake config files
+[5.021s] Level 1:colcon.colcon_core.shell:create_environment_hook('bot_reset_plugin', 'cmake_prefix_path')
+[5.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/cmake_prefix_path.ps1'
+[5.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/cmake_prefix_path.dsv'
+[5.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/cmake_prefix_path.sh'
+[5.026s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/lib'
+[5.027s] Level 1:colcon.colcon_core.shell:create_environment_hook('bot_reset_plugin', 'ld_library_path_lib')
+[5.028s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ld_library_path_lib.ps1'
+[5.030s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ld_library_path_lib.dsv'
+[5.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/hook/ld_library_path_lib.sh'
+[5.032s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/bin'
+[5.032s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/lib/pkgconfig/bot_reset_plugin.pc'
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/lib/python3.10/site-packages'
+[5.033s] Level 1:colcon.colcon_core.environment:checking '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/bin'
+[5.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.ps1'
+[5.035s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.dsv'
+[5.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.sh'
+[5.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.bash'
+[5.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.zsh'
+[5.040s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/colcon-core/packages/bot_reset_plugin)
+[5.052s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.052s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.053s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[5.053s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.064s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.082s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emma/turtlebot3_rl_ws/install/local_setup.ps1'
+[5.085s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/emma/turtlebot3_rl_ws/install/_local_setup_util_ps1.py'
+[5.087s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emma/turtlebot3_rl_ws/install/setup.ps1'
+[5.089s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emma/turtlebot3_rl_ws/install/local_setup.sh'
+[5.089s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/emma/turtlebot3_rl_ws/install/_local_setup_util_sh.py'
+[5.090s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emma/turtlebot3_rl_ws/install/setup.sh'
+[5.091s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emma/turtlebot3_rl_ws/install/local_setup.bash'
+[5.092s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emma/turtlebot3_rl_ws/install/setup.bash'
+[5.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emma/turtlebot3_rl_ws/install/local_setup.zsh'
+[5.094s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emma/turtlebot3_rl_ws/install/setup.zsh'

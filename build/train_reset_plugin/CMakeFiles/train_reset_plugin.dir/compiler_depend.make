@@ -3132,8 +3132,17 @@ CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o: /home/emma/turtl
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp
 
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp:
 
@@ -3902,6 +3911,8 @@ CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o: /home/emma/turtl
 /usr/include/boost/regex/v4/char_regex_traits.hpp:
 
 /usr/include/boost/regex/v4/regex_raw_buffer.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp:
 
 /usr/include/gazebo-11/gazebo/physics/Shape.hh:
 
@@ -5192,6 +5203,8 @@ CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o: /home/emma/turtl
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/boost/asio/compose.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
@@ -8066,6 +8079,8 @@ CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o: /home/emma/turtl
 /usr/include/boost/preprocessor/list/detail/fold_right.hpp:
 
 /usr/include/x86_64-linux-gnu/libavutil/opt.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/libswscale/swscale.h:
 

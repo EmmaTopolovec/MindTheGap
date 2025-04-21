@@ -1,0 +1,55 @@
+[0.405s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.485s] [35m[1mConsolidate compiler generated dependencies of target train_reset_plugin[0m
+[0.534s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[9.701s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:131:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kstr[m[K’ has not been declared
+[9.703s]   131 |     void CheckForCollision([01;31m[Kstr[m[K link_name) {
+[9.703s]       |                            [01;31m[K^~~[m[K
+[9.824s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::CheckForCollision(int)[m[K’:
+[9.824s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:133:46:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint[m[K’ to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[9.824s]   133 |       auto collision = this->model_->GetLink([01;31m[Klink_name[m[K)->GetCollision("collision");
+[9.824s]       |                                              [01;31m[K^~~~~~~~~[m[K
+[9.824s]       |                                              [01;31m[K|[m[K
+[9.824s]       |                                              [01;31m[Kint[m[K
+[9.824s] In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/Actor.hh:27[m[K,
+[9.824s]                  from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:2[m[K,
+[9.825s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:3[m[K:
+[9.825s] [01m[K/usr/include/gazebo-11/gazebo/physics/Model.hh:214:50:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kgazebo::physics::LinkPtr gazebo::physics::Model::GetLink(const string&) const[m[K’
+[9.825s]   214 |       public: LinkPtr GetLink([01;36m[Kconst std::string &_name ="canonical"[m[K) const;
+[9.825s]       |                               [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[9.829s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[9.829s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:159:27:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[9.830s]   159 |         CheckForCollision([01;31m[K"solid_train_link"[m[K);
+[9.830s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[9.830s]       |                           [01;31m[K|[m[K
+[9.830s]       |                           [01;31m[Kconst char*[m[K
+[9.830s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:131:32:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid gazebo::TrainResetPlugin::CheckForCollision(int)[m[K’
+[9.830s]   131 |     void CheckForCollision([01;36m[Kstr link_name[m[K) {
+[9.830s]       |                            [01;36m[K~~~~^~~~~~~~~[m[K
+[9.830s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:206:27:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[9.830s]   206 |         CheckForCollision([01;31m[K"train_link"[m[K);
+[9.830s]       |                           [01;31m[K^~~~~~~~~~~~[m[K
+[9.830s]       |                           [01;31m[K|[m[K
+[9.830s]       |                           [01;31m[Kconst char*[m[K
+[9.830s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:131:32:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid gazebo::TrainResetPlugin::CheckForCollision(int)[m[K’
+[9.830s]   131 |     void CheckForCollision([01;36m[Kstr link_name[m[K) {
+[9.830s]       |                            [01;36m[K~~~~^~~~~~~~~[m[K
+[9.831s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:207:27:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[9.831s]   207 |         CheckForCollision([01;31m[K"left_link"[m[K);
+[9.831s]       |                           [01;31m[K^~~~~~~~~~~[m[K
+[9.831s]       |                           [01;31m[K|[m[K
+[9.831s]       |                           [01;31m[Kconst char*[m[K
+[9.831s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:131:32:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid gazebo::TrainResetPlugin::CheckForCollision(int)[m[K’
+[9.831s]   131 |     void CheckForCollision([01;36m[Kstr link_name[m[K) {
+[9.831s]       |                            [01;36m[K~~~~^~~~~~~~~[m[K
+[9.831s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:208:27:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[9.831s]   208 |         CheckForCollision([01;31m[K"right_link"[m[K);
+[9.831s]       |                           [01;31m[K^~~~~~~~~~~~[m[K
+[9.831s]       |                           [01;31m[K|[m[K
+[9.831s]       |                           [01;31m[Kconst char*[m[K
+[9.831s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:131:32:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid gazebo::TrainResetPlugin::CheckForCollision(int)[m[K’
+[9.832s]   131 |     void CheckForCollision([01;36m[Kstr link_name[m[K) {
+[9.832s]       |                            [01;36m[K~~~~^~~~~~~~~[m[K
+[13.228s] gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+[13.229s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+[13.229s] gmake: *** [Makefile:146: all] Error 2
+[13.232s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4

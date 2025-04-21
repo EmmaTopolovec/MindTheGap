@@ -1,0 +1,154 @@
+[0.501s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4
+[0.708s] [ 50%] [32mBuilding CXX object CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o[0m
+[22.952s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:265:38:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[22.953s]   265 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KBool[m[K>::SharedPtr train_arrived_pub_;
+[22.954s]       |                                      [01;31m[K^~~~[m[K
+[22.954s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:265:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[22.954s]   265 |     rclcpp::Publisher<std_msgs::msg::Bool[01;31m[K>[m[K::SharedPtr train_arrived_pub_;
+[22.954s]       |                                          [01;31m[K^[m[K
+[22.964s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:265:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[22.964s]   265 |     rclcpp::Publisher<std_msgs::msg::Bool>::[01;31m[KSharedPtr[m[K train_arrived_pub_;
+[22.964s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[22.964s]       |                                                      [32m[K;[m[K
+[22.997s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:265:55:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_arrived_pub_[m[K’ does not name a type
+[22.997s]   265 |     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr [01;31m[Ktrain_arrived_pub_[m[K;
+[22.997s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[23.011s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:266:38:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[23.011s]   266 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KBool[m[K>::SharedPtr collision_pub_;
+[23.013s]       |                                      [01;31m[K^~~~[m[K
+[23.014s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:266:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[23.014s]   266 |     rclcpp::Publisher<std_msgs::msg::Bool[01;31m[K>[m[K::SharedPtr collision_pub_;
+[23.014s]       |                                          [01;31m[K^[m[K
+[23.015s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:266:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[23.015s]   266 |     rclcpp::Publisher<std_msgs::msg::Bool>::[01;31m[KSharedPtr[m[K collision_pub_;
+[23.015s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[23.015s]       |                                                      [32m[K;[m[K
+[23.015s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:266:45:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint gazebo::TrainResetPlugin::SharedPtr[m[K’
+[23.015s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:265:45:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint gazebo::TrainResetPlugin::SharedPtr[m[K’
+[23.015s]   265 |     rclcpp::Publisher<std_msgs::msg::Bool>::[01;36m[KSharedPtr[m[K train_arrived_pub_;
+[23.015s]       |                                             [01;36m[K^~~~~~~~~[m[K
+[23.057s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:266:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_pub_[m[K’ does not name a type
+[23.057s]   266 |     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr [01;31m[Kcollision_pub_[m[K;
+[23.057s]       |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[23.183s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::TrainResetPlugin::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’:
+[23.183s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:57:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_arrived_pub_[m[K’ was not declared in this scope
+[23.184s]    57 |       [01;31m[Ktrain_arrived_pub_[m[K = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/arrived", 10);
+[23.186s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[23.197s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:57:71:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[23.197s]    57 | n_arrived_pub_ = ros_node_->create_publisher<std_msgs::msg::[01;31m[KBool[m[K>("/train/arrived", 10);
+[23.197s]       |                                                             [01;31m[K^~~~[m[K
+[23.198s] 
+[23.198s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:57:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [15], int)[m[K’
+[23.198s]    57 | ived_pub_ = [01;31m[Kros_node_->create_publisher<std_msgs::msg::Bool>("/train/arrived", 10)[m[K;
+[23.198s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[23.198s] 
+[23.198s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[23.198s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[23.199s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[23.199s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:4[m[K:
+[23.199s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[23.199s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[23.199s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[23.199s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[23.199s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:57:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[23.199s]    57 | ived_pub_ = [01;31m[Kros_node_->create_publisher<std_msgs::msg::Bool>("/train/arrived", 10)[m[K;
+[23.199s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[23.199s] 
+[23.269s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:58:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_pub_[m[K’ was not declared in this scope
+[23.271s]    58 |       [01;31m[Kcollision_pub_[m[K = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/collision", 10);
+[23.271s]       |       [01;31m[K^~~~~~~~~~~~~~[m[K
+[23.274s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:58:67:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[23.275s]    58 | collision_pub_ = ros_node_->create_publisher<std_msgs::msg::[01;31m[KBool[m[K>("/train/collision", 10);
+[23.278s]       |                                                             [01;31m[K^~~~[m[K
+[23.283s] 
+[23.284s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:58:72:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [17], int)[m[K’
+[23.284s]    58 | sion_pub_ = [01;31m[Kros_node_->create_publisher<std_msgs::msg::Bool>("/train/collision", 10)[m[K;
+[23.284s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[23.284s] 
+[23.285s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[23.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[23.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[23.285s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:4[m[K:
+[23.285s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[23.285s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[23.285s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[23.285s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[23.285s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:58:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[23.286s]    58 | sion_pub_ = [01;31m[Kros_node_->create_publisher<std_msgs::msg::Bool>("/train/collision", 10)[m[K;
+[23.286s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[23.286s] 
+[23.335s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
+[23.335s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:144:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Collision[m[K’ has no member named ‘[01m[KColliding[m[K’; did you mean ‘[01m[KCollision[m[K’?
+[23.335s]   144 |           if (collision->[01;31m[KColliding[m[K())
+[23.335s]       |                          [01;31m[K^~~~~~~~~[m[K
+[23.335s]       |                          [32m[KCollision[m[K
+[23.335s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:189:26:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[23.335s]   189 |           std_msgs::msg::[01;31m[KBool[m[K msg;
+[23.336s]       |                          [01;31m[K^~~~[m[K
+[23.336s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:190:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[23.336s]   190 |           [01;31m[Kmsg[m[K.data = true;
+[23.336s]       |           [01;31m[K^~~[m[K
+[23.336s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:190:11:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[23.336s] In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[23.336s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[23.337s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:4[m[K:
+[23.337s] [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[23.337s]    27 | namespace [01;36m[Kmsg[m[K
+[23.337s]       |           [01;36m[K^~~[m[K
+[23.337s] In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+[23.337s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+[23.338s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[23.338s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[23.350s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[23.352s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[23.353s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[23.353s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[23.353s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[23.354s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:4[m[K:
+[23.354s] [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[23.354s]    27 | namespace [01;36m[Kmsg[m[K
+[23.354s]       |           [01;36m[K^~~[m[K
+[23.354s] In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[23.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[23.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[23.355s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:4[m[K:
+[23.355s] [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[23.355s]    27 | namespace [01;36m[Kmsg[m[K
+[23.355s]       |           [01;36m[K^~~[m[K
+[23.355s] In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/empty.hpp:7[m[K,
+[23.355s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:5[m[K:
+[23.355s] [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[23.355s]    27 | namespace [01;36m[Kmsg[m[K
+[23.355s]       |           [01;36m[K^~~[m[K
+[23.406s] [01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:191:11:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrain_arrived_pub_[m[K’ was not declared in this scope
+[23.407s]   191 |           [01;31m[Ktrain_arrived_pub_[m[K->publish(msg);
+[23.407s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[35.683s] gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
+[35.684s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
+[35.685s] gmake: *** [Makefile:146: all] Error 2
+[35.708s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/train_reset_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/train_reset_plugin -- -j4 -l4

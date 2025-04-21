@@ -10,7 +10,7 @@ env = TrainEnv()
 model = PPO("MlpPolicy", env, verbose=1)
 
 # Train the model
-model.learn(total_timesteps=100)
+model.learn(total_timesteps=10000)
 
 # Save the model
 model_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

@@ -1,0 +1,55 @@
+[01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::BotResetPlugin::SetPositionCallback(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:47:23:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Quaternion<double>::Euler(double*, double*, double*)[m[K’
+   47 |       [01;31m[Kinput_quat.Euler(&roll, &pitch, &yaw)[m[K;
+      |       [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:20[m[K,
+                 from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:313:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid ignition::math::v6::Quaternion<T>::Euler(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’
+  313 |       public: void [01;36m[KEuler[m[K(const Vector3<T> &_vec)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:313:20:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:322:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid ignition::math::v6::Quaternion<T>::Euler(T, T, T) [with T = double][m[K’
+  322 |       public: void [01;36m[KEuler[m[K(T _roll, T _pitch, T _yaw)
+      |                    [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:322:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble*[m[K’ to ‘[01m[Kdouble[m[K’
+  322 |       public: void Euler([01;36m[KT _roll[m[K, T _pitch, T _yaw)
+      |                          [01;36m[K~~^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:344:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Vector3<T> ignition::math::v6::Quaternion<T>::Euler() const [with T = double][m[K’
+  344 |       public: Vector3<T> [01;36m[KEuler[m[K() const
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Quaternion.hh:344:26:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+[01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:56:18:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kignition::math::v6::Pose3<double>::Pose3(geometry_msgs::msg::Point_<std::allocator<void> >::_x_type&, geometry_msgs::msg::Point_<std::allocator<void> >::_y_type&, geometry_msgs::msg::Point_<std::allocator<void> >::_z_type&, ignition::math::v6::Quaterniond&)[m[K’
+   56 |         flat_quat[01;31m[K)[m[K;
+      |                  [01;31m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Pose3.hh:18[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/Actor.hh:23[m[K,
+                 from [01m[K/usr/include/sdformat-9.7/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:33[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:1[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Pose3<T>&) [with T = double][m[K’
+   79 |       public: [01;36m[KPose3[m[K(const Pose3<T> &_pose)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:79:15:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T, T) [with T = double][m[K’
+   72 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _qw, T _qx, T _qy, T _qz)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:72:15:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 4 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(T, T, T, T, T, T) [with T = double][m[K’
+   59 |       public: [01;36m[KPose3[m[K(T _x, T _y, T _z, T _roll, T _pitch, T _yaw)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:59:15:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 4 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3(const ignition::math::v6::Vector3<T>&, const ignition::math::v6::Quaternion<T>&) [with T = double][m[K’
+   47 |       public: [01;36m[KPose3[m[K(const Vector3<T> &_pos, const Quaternion<T> &_rot)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:47:15:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 4 provided
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kignition::math::v6::Pose3<T>::Pose3() [with T = double][m[K’
+   40 |       public: [01;36m[KPose3[m[K() : p(0, 0, 0), q(1, 0, 0, 0)
+      |               [01;36m[K^~~~~[m[K
+[01m[K/usr/include/ignition/math6/gz/math/Pose3.hh:40:15:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 4 provided
+gmake[2]: *** [CMakeFiles/bot_reset_plugin.dir/build.make:76: CMakeFiles/bot_reset_plugin.dir/src/bot_reset_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bot_reset_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
