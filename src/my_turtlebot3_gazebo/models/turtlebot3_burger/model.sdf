@@ -24,7 +24,7 @@
         <pose>-0.032 0 0.070 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.140 0.140 0.140</size>
+            <size>0.240 0.240 0.140</size>
           </box>
         </geometry>
       </collision>
@@ -38,6 +38,13 @@
           </mesh>
         </geometry>
       </visual>
+
+      <sensor name="base_contact" type="contact">
+        <plugin name="contact_plugin" filename="libcontact_plugin.so"></plugin>
+        <contact>
+          <collision>base_collision</collision>
+        </contact>
+      </sensor>
     </link>
 
     <link name="imu_link">

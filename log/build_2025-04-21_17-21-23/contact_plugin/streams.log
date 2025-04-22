@@ -1,0 +1,157 @@
+[0.046s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/contact_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/contact_plugin
+[0.339s] -- The C compiler identification is GNU 11.4.0
+[0.564s] -- The CXX compiler identification is GNU 11.4.0
+[0.599s] -- Detecting C compiler ABI info
+[0.731s] -- Detecting C compiler ABI info - done
+[0.731s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.732s] -- Detecting C compile features
+[0.733s] -- Detecting C compile features - done
+[0.738s] -- Detecting CXX compiler ABI info
+[0.828s] -- Detecting CXX compiler ABI info - done
+[0.838s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.838s] -- Detecting CXX compile features
+[0.838s] -- Detecting CXX compile features - done
+[0.846s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.049s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.188s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.327s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.336s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.354s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.376s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.401s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.479s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.486s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.636s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.690s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.738s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.757s] -- Looking for pthread.h
+[1.870s] -- Looking for pthread.h - found
+[1.870s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.972s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.972s] -- Found Threads: TRUE  
+[2.076s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.100s] -- Found gazebo_dev: 3.9.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+[2.113s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[2.113s] -- Checking for module 'bullet>=2.82'
+[2.129s] --   Found bullet, version 3.05
+[2.265s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[2.325s] -- Found assimp: /usr/include (found version "5.2.0") 
+[2.367s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[2.416s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[2.448s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[2.454s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.468s] -- Searching for dependencies of ignition-math6
+[2.472s] -- Looking for OGRE...
+[2.474s] -- OGRE_PREFIX_WATCH changed.
+[2.478s] -- Checking for module 'OGRE'
+[2.494s] --   Found OGRE, version 1.9.0
+[2.536s] -- Found Ogre Ghadamon (1.9.0)
+[2.552s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[2.552s] -- Looking for OGRE_Paging...
+[2.573s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[2.574s] -- Looking for OGRE_Terrain...
+[2.574s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[2.574s] -- Looking for OGRE_Property...
+[2.589s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[2.589s] -- Looking for OGRE_RTShaderSystem...
+[2.594s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[2.600s] -- Looking for OGRE_Volume...
+[2.614s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[2.615s] -- Looking for OGRE_Overlay...
+[2.625s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[2.764s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.766s] -- Looking for ignition-transport8 -- found version 8.2.1
+[2.767s] -- Searching for dependencies of ignition-transport8
+[2.785s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[2.796s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.802s] -- Checking for module 'libzmq >= 4'
+[2.824s] --   Found libzmq , version 4.3.4
+[2.868s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.876s] -- Checking for module 'uuid'
+[2.892s] --   Found uuid, version 2.37.2
+[2.933s] -- Found UUID: TRUE  
+[2.937s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.938s] -- Searching for dependencies of ignition-msgs5
+[2.957s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.963s] -- Checking for module 'tinyxml2'
+[2.979s] --   Found tinyxml2, version 9.0.0
+[3.034s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.040s] -- Looking for ignition-common3 -- found version 3.14.0
+[3.041s] -- Searching for dependencies of ignition-common3
+[3.042s] -- Looking for dlfcn.h - found
+[3.043s] -- Looking for libdl - found
+[3.044s] -- Found DL: TRUE  
+[3.060s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[3.061s] -- Searching for <ignition-common3> component [graphics]
+[3.066s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[3.066s] -- Searching for dependencies of ignition-common3-graphics
+[3.066s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.074s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[3.074s] -- Searching for dependencies of ignition-fuel_tools4
+[3.163s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[3.175s] -- Checking for module 'jsoncpp'
+[3.192s] --   Found jsoncpp, version 1.9.5
+[3.233s] -- Found JSONCPP: TRUE  
+[3.241s] -- Checking for module 'libzip'
+[3.256s] --   Found libzip, version 1.7.3
+[3.298s] -- Found ZIP: TRUE  
+[3.299s] -- Looking for ignition-common3 -- found version 3.14.0
+[3.300s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.300s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.307s] -- Gazebo version: 11.10
+[3.307s] -- Checking for module 'tbb'
+[3.324s] --   Found tbb, version 2021.5.0
+[3.369s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[3.473s] -- Configuring done
+[3.474s] -- Generating done
+[3.474s] [33mCMake Warning:
+[3.475s]   Manually-specified variables were not used by the project:
+[3.475s] 
+[3.476s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[3.477s] 
+[3.477s] [0m
+[3.478s] -- Build files have been written to: /home/emma/turtlebot3_rl_ws/build/contact_plugin
+[3.495s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '0': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/contact_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/contact_plugin
+[3.496s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4
+[3.584s] [ 50%] [32mBuilding CXX object CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o[0m
+[15.490s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:10:12:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kgazebo::ContactPlugin::[m[K’ on member ‘[01m[KLoad[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[15.490s]    10 |       void [01;31m[KContactPlugin[m[K::Load(sensors::SensorPtr _sensor, sdf::ElementPtr /*_sdf*/)
+[15.490s]       |            [01;31m[K^~~~~~~~~~~~~[m[K
+[15.490s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:32:12:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kgazebo::ContactPlugin::[m[K’ on member ‘[01m[KOnUpdate[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[15.490s]    32 |       void [01;31m[KContactPlugin[m[K::OnUpdate()
+[15.490s]       |            [01;31m[K^~~~~~~~~~~~~[m[K
+[15.495s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::ContactPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[15.495s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:13:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+[15.495s]    13 |         this->[01;31m[KparentSensor[m[K =
+[15.495s]       |               [01;31m[K^~~~~~~~~~~~[m[K
+[15.500s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:17:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+[15.500s]    17 |         if (!this->[01;31m[KparentSensor[m[K)
+[15.500s]       |                    [01;31m[K^~~~~~~~~~~~[m[K
+[15.502s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:24:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KupdateConnection[m[K’
+[15.502s]    24 |         this->[01;31m[KupdateConnection[m[K = this->parentSensor->ConnectUpdated(
+[15.502s]       |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[15.502s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:24:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+[15.502s]    24 |         this->updateConnection = this->[01;31m[KparentSensor[m[K->ConnectUpdated(
+[15.502s]       |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[15.510s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:28:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+[15.510s]    28 |         this->[01;31m[KparentSensor[m[K->SetActive(true);
+[15.510s]       |               [01;31m[K^~~~~~~~~~~~[m[K
+[15.511s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::ContactPlugin::OnUpdate()[m[K’:
+[15.512s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:36:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+[15.512s]    36 |         contacts = this->[01;31m[KparentSensor[m[K->Contacts();
+[15.512s]       |                          [01;31m[K^~~~~~~~~~~~[m[K
+[15.517s] In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:36[m[K,
+[15.517s]                  from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+[15.517s]                  from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+[15.517s]                  from [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:2[m[K:
+[15.517s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In function ‘[01m[Kgazebo::ModelPlugin* gazebo::RegisterPlugin()[m[K’:
+[15.517s] [01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:459:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kgazebo::ContactPlugin*[m[K’ to ‘[01m[Kgazebo::ModelPlugin*[m[K’ in return
+[15.518s]   459 |     return new classname([01;31m[K)[m[K;\
+[15.518s]       |                          [01;31m[K^[m[K
+[15.518s] [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:57:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGZ_REGISTER_MODEL_PLUGIN[m[K’
+[15.518s]    57 |   [01;36m[KGZ_REGISTER_MODEL_PLUGIN[m[K(ContactPlugin)
+[15.518s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[19.014s] gmake[2]: *** [CMakeFiles/contact_plugin.dir/build.make:76: CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o] Error 1
+[19.014s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/contact_plugin.dir/all] Error 2
+[19.015s] gmake: *** [Makefile:146: all] Error 2
+[19.042s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4

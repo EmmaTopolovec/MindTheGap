@@ -1,0 +1,16 @@
+[35m[1mConsolidate compiler generated dependencies of target contact_plugin[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o[0m
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:36[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:2[m[K:
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In function ‘[01m[Kgazebo::ModelPlugin* gazebo::RegisterPlugin()[m[K’:
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:459:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kgazebo::ContactPlugin*[m[K’ to ‘[01m[Kgazebo::ModelPlugin*[m[K’ in return
+  459 |     return new classname([01;31m[K)[m[K;\
+      |                          [01;31m[K^[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:62:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGZ_REGISTER_MODEL_PLUGIN[m[K’
+   62 |   [01;36m[KGZ_REGISTER_MODEL_PLUGIN[m[K(ContactPlugin)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/contact_plugin.dir/build.make:76: CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/contact_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

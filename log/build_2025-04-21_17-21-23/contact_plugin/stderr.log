@@ -1,0 +1,46 @@
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CATKIN_INSTALL_INTO_PREFIX_ROOT
+
+[0m
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:10:12:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kgazebo::ContactPlugin::[m[K’ on member ‘[01m[KLoad[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   10 |       void [01;31m[KContactPlugin[m[K::Load(sensors::SensorPtr _sensor, sdf::ElementPtr /*_sdf*/)
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:32:12:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kgazebo::ContactPlugin::[m[K’ on member ‘[01m[KOnUpdate[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   32 |       void [01;31m[KContactPlugin[m[K::OnUpdate()
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::ContactPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:13:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+   13 |         this->[01;31m[KparentSensor[m[K =
+      |               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:17:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+   17 |         if (!this->[01;31m[KparentSensor[m[K)
+      |                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:24:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KupdateConnection[m[K’
+   24 |         this->[01;31m[KupdateConnection[m[K = this->parentSensor->ConnectUpdated(
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:24:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+   24 |         this->updateConnection = this->[01;31m[KparentSensor[m[K->ConnectUpdated(
+      |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:28:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+   28 |         this->[01;31m[KparentSensor[m[K->SetActive(true);
+      |               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::ContactPlugin::OnUpdate()[m[K’:
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:36:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::ContactPlugin[m[K’ has no member named ‘[01m[KparentSensor[m[K’
+   36 |         contacts = this->[01;31m[KparentSensor[m[K->Contacts();
+      |                          [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:36[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:2[m[K:
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:[m[K In function ‘[01m[Kgazebo::ModelPlugin* gazebo::RegisterPlugin()[m[K’:
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:459:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kgazebo::ContactPlugin*[m[K’ to ‘[01m[Kgazebo::ModelPlugin*[m[K’ in return
+  459 |     return new classname([01;31m[K)[m[K;\
+      |                          [01;31m[K^[m[K
+[01m[K/home/emma/turtlebot3_rl_ws/src/contact_plugin/src/contact_plugin.cpp:57:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGZ_REGISTER_MODEL_PLUGIN[m[K’
+   57 |   [01;36m[KGZ_REGISTER_MODEL_PLUGIN[m[K(ContactPlugin)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/contact_plugin.dir/build.make:76: CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/contact_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

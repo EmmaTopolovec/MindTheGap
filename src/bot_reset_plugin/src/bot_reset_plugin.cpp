@@ -3,7 +3,7 @@
 #include <gazebo/physics/physics.hh>
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/empty.hpp>
-#include <geometry_msgs/msg/pose.hpp>  // <-- Add this for geometry_msgs::msg::Pose
+#include <geometry_msgs/msg/pose.hpp> 
 #include <thread>
 
 
@@ -36,7 +36,6 @@ namespace gazebo
 
     void SetPositionCallback(const geometry_msgs::msg::Pose::SharedPtr msg)
     {
-      // Convert quaternion to yaw only, then reconstruct flat quaternion
       ignition::math::Quaterniond input_quat(
         msg->orientation.w,
         msg->orientation.x,
@@ -48,7 +47,6 @@ namespace gazebo
       double pitch = rpy.Y();
       double yaw = rpy.Z();        
 
-      // Rebuild a flat yaw-only quaternion
       ignition::math::Quaterniond flat_quat(0, 0, yaw);
 
       ignition::math::Vector3d position(msg->position.x, msg->position.y, msg->position.z);
@@ -63,6 +61,22 @@ namespace gazebo
         link->SetAngularVel(ignition::math::Vector3d::Zero);
       }
 
+      auto left_wheel = model_->GetJoint("left_wheel_joint");
+      auto right_wheel = model_->GetJoint("right_wheel_joint");
+
+      if (left_wheel) {
+          left_wheel->SetForce(0, 0.0);
+          left_wheel->SetVelocity(0, 0.0);
+      }
+      if (right_wheel) {
+          right_wheel->SetForce(0, 0.0);
+          right_wheel->SetVelocity(0, 0.0);
+      }
+
+    
+
+
+
       RCLCPP_INFO(
         ros_node_->get_logger(),
         "Set bot pose to (x: %f, y: %f, z: %f, yaw: %f)",
@@ -71,7 +85,6 @@ namespace gazebo
 
     void SpinRosNode()
     {
-      // Spin the ROS node in its own thread
       rclcpp::spin(ros_node_);
     }
 

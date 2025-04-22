@@ -10,24 +10,28 @@ from std_msgs.msg import Empty
 from std_msgs.msg import Bool
 import random
 import math
+import time
+import os
 
+# Convert x, y, z angle to quaternion
 def euler_to_quaternion(roll, pitch, yaw):
-        qx = math.sin(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) - \
-            math.cos(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
-        qy = math.cos(roll/2) * math.sin(pitch/2) * math.cos(yaw/2) + \
-            math.sin(roll/2) * math.cos(pitch/2) * math.sin(yaw/2)
-        qz = math.cos(roll/2) * math.cos(pitch/2) * math.sin(yaw/2) - \
-            math.sin(roll/2) * math.sin(pitch/2) * math.cos(yaw/2)
-        qw = math.cos(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) + \
-            math.sin(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
-        return qx, qy, qz, qw
+    qx = math.sin(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) - \
+        math.cos(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
+    qy = math.cos(roll/2) * math.sin(pitch/2) * math.cos(yaw/2) + \
+        math.sin(roll/2) * math.cos(pitch/2) * math.sin(yaw/2)
+    qz = math.cos(roll/2) * math.cos(pitch/2) * math.sin(yaw/2) - \
+        math.sin(roll/2) * math.sin(pitch/2) * math.cos(yaw/2)
+    qw = math.cos(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) + \
+        math.sin(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
+    return qx, qy, qz, qw
     
+# Convert quaternion to x, y, and z angles and extract z angle (yaw)
 def quaternion_to_yaw(x, y, z, w):
-    # This gives yaw only (simplified for 2D use cases)
     siny_cosp = 2 * (w * z + x * y)
     cosy_cosp = 1 - 2 * (y * y + z * z)
     return math.atan2(siny_cosp, cosy_cosp)
 
+# OpenAI Gym Environment
 class TrainEnv(gym.Env):
     def __init__(self):
         super(TrainEnv, self).__init__()
@@ -36,6 +40,7 @@ class TrainEnv(gym.Env):
         rclpy.init()
         self.node = Node('train_env_node')
 
+        # Subscribe to hear when bot collides with train
         self.train_collision = False
         self.node.create_subscription(
             Bool,
@@ -44,23 +49,27 @@ class TrainEnv(gym.Env):
             10
         )
 
-        # Velocity publisher
+        # Send velocity commands publisher
         self.cmd_vel_pub = self.node.create_publisher(Twist, '/cmd_vel', 10)
 
-        # Reset train
+        # Reset train publisher
         self.reset_pub = self.node.create_publisher(Empty, '/train/reset', 10)
+        
+        # Start train publisher
+        self.start_train_pub = self.node.create_publisher(Empty, '/train/start', 10)
 
-        # Set turtlebot3 pose
+        # Set turtlebot3 pose publisher
         self.bot_pose_pub =  self.node.create_publisher(Pose, '/set_bot_position', 10)
 
-        # Subscribe to train arrival flag
+        # Subscribe to hear when train leaves (reset sim)
         self.train_leaving = False
         self.node.create_subscription(Bool, '/train/leaving', self._train_leaving_cb, 10)
 
-        # Subscribe to odometry for bot position
+        # Subscribe to hear odometry for bot position
         self.node.create_subscription(Odometry, '/odom', self._odom_cb, 10)
 
-        self.laser_data = np.zeros(24, dtype=np.float32)  # initialize with zeros
+        # Subscribe to hear LiDAR data
+        self.laser_data = np.zeros(24, dtype=np.float32)
         self.node.create_subscription(
             LaserScan,
             '/scan',
@@ -68,7 +77,7 @@ class TrainEnv(gym.Env):
             10
         )
 
-        # Observation
+        # Observation Space
         self.observation_space = spaces.Box(
             low=np.concatenate((
                 np.array([-10, -3.0, 0, 0.0]),     # pose: x, y, z, angle
@@ -81,7 +90,8 @@ class TrainEnv(gym.Env):
             dtype=np.float32
         )
 
-        self.action_space = spaces.Discrete(3)
+        # Action space (left, right, forward, stop)
+        self.action_space = spaces.Discrete(4)
 
     def _collision_callback(self, msg):
         self.train_collision = msg.data
@@ -110,19 +120,21 @@ class TrainEnv(gym.Env):
             lidar_obs = np.clip(self.laser_data, 0, 10)  # clip distances for safety
             combined = np.concatenate((pose_obs, lidar_obs))
         else:
-            combined = pose_obs  # fallback if no data yet
+            combined = pose_obs
         return combined
 
     def reset(self):
+        os.system("ros2 service call /reset_world std_srvs/srv/Empty '{}'")
+
         reset_msg = Empty()
         self.reset_pub.publish(reset_msg)
         self.node.get_logger().info("Published reset message to /train/reset")
 
-        # Set a random initial position within the platform's valid range
-        self.x = random.uniform(10, 81.75)  # Ensure these values respect the platform
-        self.y = random.uniform(-2.5, -0.5)  # Ensure this is in the goal range of y
-        self.z = 1.17  # Ensure z > 1.15 (the platform height)
-        self.angle = random.uniform(0, 2 * np.pi)  # random orientation between 0 and 2π
+        # Set a random initial position on the platform's
+        self.x = random.uniform(10, 81.75)
+        self.y = random.uniform(-2.0, -0.5)
+        self.z = 1.17
+        self.angle = random.uniform(0, 2 * np.pi)
 
         pose = Pose()
         pose.position.x = self.x
@@ -138,61 +150,68 @@ class TrainEnv(gym.Env):
         self.bot_pose_pub.publish(pose)
         self.node.get_logger().info(f"Published new bot position {pose} /set_bot_position")
         
-        # Distance to the goal (in y range [1, 3])
-        self.distance_to_goal = self.y - 2  # If goal is between 1 and 3, goal is y = 2
+        self.distance_to_goal = abs(self.y - 2)
         self.prev_distance_to_goal = abs(self.y - 2)
 
         self.train_leaving = False
+        self.train_collision = False
+
+        time.sleep(10)
+
+        start_train_msg = Empty()
+        self.start_train_pub.publish(start_train_msg)
+        self.node.get_logger().info("Published reset message to /train/start")
         
-        # Return the initial observation
         return self.get_observation()
 
     def step(self, action):
-        # Step the agent based on the action chosen by the RL algorithm
-
-        # self.render()
-
-        # Apply the action: move forward, left, or right
         msg = Twist()
         
-        if action == 0:  # Move forward
-            msg.linear.x = 0.5
+        if action == 0: # Move forward
+            msg.linear.x = 0.9
             msg.angular.z = 0.0
-        elif action == 1:  # Turn left
+        elif action == 1: # Turn left
             msg.linear.x = 0.0
             msg.angular.z = 0.5
-        elif action == 2:  # Turn right
+        elif action == 2: # Turn right
             msg.linear.x = 0.0
             msg.angular.z = -0.5
+        elif action == 3: # Stop
+            msg.linear.x = 0.0
+            msg.angular.z = 0.0
 
         # Publish the velocity command
         self.cmd_vel_pub.publish(msg)
 
         rclpy.spin_once(self.node, timeout_sec=0.1)
 
-        # Compute distance to goal (y = 2)
+        # Compute distance to goal
         distance_to_goal = abs(self.y - 2)
-        reward = -distance_to_goal
-        done = False  # <- initialize done to False
+        reward = 0
+        done = False
 
         if distance_to_goal > self.prev_distance_to_goal:
-            reward -= 5  # Penalty for moving away
+            reward = (self.prev_distance_to_goal - distance_to_goal) * 20
+            # print("[RL]: Moving away from goal.")
+        elif distance_to_goal < self.prev_distance_to_goal:
+            reward = (self.prev_distance_to_goal - distance_to_goal) * 10
+            # print("[RL]: Moving towards goal.")
 
         self.prev_distance_to_goal = distance_to_goal
 
         # Check failure conditions
-        if self.z < 1.15:
-            reward = -100
+        if self.z < 1:
+            reward = -1000
             done = True
-            print("[RL]: Bot Fell! (Z<1.15)")
+            print("[RL]: Bot Fell! (Z<1)")
         elif self.check_collision():
-            reward = -100
+            reward = -1000
             done = True
             print("[RL]: COLLISION DETECTED!")
 
         # Check success condition (train boarded)
         elif 1 <= self.y <= 3:
-            reward = 100
+            reward = 10000
             done = True
             print("[RL]: TRAIN BOARDED!")
 
@@ -201,6 +220,8 @@ class TrainEnv(gym.Env):
             done = True
             print("[RL]: FAILED TO BOARD TRAIN BEFORE DOORS CLOSED!")
         
+        # print(f"[RL_reward]: {reward}")
+
         observation = self.get_observation()
         return observation, reward, done, {}
 
@@ -213,14 +234,14 @@ class TrainEnv(gym.Env):
         rclpy.shutdown()
 
     def check_collision(self):
-        # Collision from ROS topic
+        # Bot collides with something (Poorly named from previous implementation)
         if self.train_collision:
-            print("[RL]: Collision flag from /train/collision topic.")
+            print("[RL]: Collision flag from /train/collision")
             return True
 
-        # Collision based on Y position (bot left the valid area)
-        if self.y < -2.75:
-            print(f"[RL]: Collision due to Y position ({self.y:.2f} < -2.75)")
+        # Collision with platform wall
+        if self.y < -2.5:
+            print(f"[RL]: Collision with platform wall ({self.y:.2f} < -2.75)")
             return True
 
         return False

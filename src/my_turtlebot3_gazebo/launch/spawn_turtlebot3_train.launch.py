@@ -48,9 +48,9 @@ def generate_launch_description():
         arguments=[
             '-entity', TURTLEBOT3_MODEL,
             '-file', urdf_path,
-            '-x', "-10.0",
-            '-y', "-10.0",
-            '-z', '0.1'
+            '-x', "2.0",
+            '-y', "-2.0",
+            '-z', '1.17'
         ],
         output='screen',
     )

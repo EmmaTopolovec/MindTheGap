@@ -1,0 +1,25 @@
+[0.041s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4
+[0.240s] [ 50%] [32mBuilding CXX object CMakeFiles/bot_reset_plugin.dir/src/bot_reset_plugin.cpp.o[0m
+[25.384s] [100%] [32m[1mLinking CXX shared library libbot_reset_plugin.so[0m
+[26.461s] [100%] Built target bot_reset_plugin
+[26.488s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin' returned '0': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin -- -j4 -l4
+[26.493s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin
+[26.506s] -- Install configuration: ""
+[26.518s] -- Installing: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/lib/libbot_reset_plugin.so
+[26.519s] -- Set runtime path of "/home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/lib/libbot_reset_plugin.so" to ""
+[26.520s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/ament_index/resource_index/package_run_dependencies/bot_reset_plugin
+[26.520s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/ament_index/resource_index/parent_prefix_path/bot_reset_plugin
+[26.520s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/environment/ament_prefix_path.sh
+[26.521s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/environment/ament_prefix_path.dsv
+[26.521s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/environment/path.sh
+[26.521s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/environment/path.dsv
+[26.522s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/local_setup.bash
+[26.522s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/local_setup.sh
+[26.523s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/local_setup.zsh
+[26.523s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/local_setup.dsv
+[26.524s] -- Installing: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.dsv
+[26.524s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/ament_index/resource_index/packages/bot_reset_plugin
+[26.524s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/cmake/bot_reset_pluginConfig.cmake
+[26.524s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/cmake/bot_reset_pluginConfig-version.cmake
+[26.524s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/bot_reset_plugin/share/bot_reset_plugin/package.xml
+[26.531s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/bot_reset_plugin' returned '0': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/bot_reset_plugin
