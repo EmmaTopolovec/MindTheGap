@@ -193,7 +193,7 @@ namespace gazebo
 
             door_state_ = 3;
             door_timer_start_ = sim_time;
-            RCLCPP_INFO(ros_node_->get_logger(), "Doors opened.");
+            RCLCPP_INFO(ros_node_->get_logger(), "Doors opened. Mind the gap!");
           }
         }
         else if (door_state_ == 3 && t < 15.0) {}

@@ -5,6 +5,7 @@
 #include "std_msgs/msg/bool.hpp"
 #include <thread>
 #include <rclcpp/rclcpp.hpp>
+#include <chrono>
 
 namespace gazebo
 {
@@ -21,6 +22,8 @@ namespace gazebo
 
         ros_node_ = std::make_shared<rclcpp::Node>("contact_plugin_node");
         collision_pub_ = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/collision", 10);
+
+        in_collision_ = false;
 
         // Get the parent sensor.
         this->parentSensor =
@@ -68,10 +71,16 @@ namespace gazebo
         //     std::cout << "   Depth:" << contacts.contact(i).depth(j) << "\n";
         //   }
         // }
-        if (contacts.contact_size() > 0) {
+        if (contacts.contact_size() > 0 && !in_collision_) {
+          in_collision_ = true;
           std_msgs::msg::Bool msg;
           msg.data = true;  // Collision detected
           collision_pub_->publish(msg);
+          // RCLCPP_INFO(ros_node_->get_logger(), "COLLISION STARTED. PUBLISHING!");
+        }
+        else if (contacts.contact_size() == 0 && in_collision_) {
+          in_collision_ = false;
+          // RCLCPP_INFO(ros_node_->get_logger(), "COLLISION ENDED.");
         }
       }
 
@@ -85,6 +94,7 @@ namespace gazebo
       event::ConnectionPtr updateConnection;
       rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr collision_pub_;
       std::shared_ptr<std::thread> ros_spin_thread_;
+      bool in_collision_;
   };
   GZ_REGISTER_SENSOR_PLUGIN(ContactPlugin)
 }

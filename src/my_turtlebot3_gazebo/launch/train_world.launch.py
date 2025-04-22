@@ -42,11 +42,12 @@ def generate_launch_description():
         ),
         launch_arguments={
             'world': world,
-            'verbose': 'true'
+            'verbose': 'true',
+            'headless': 'false' # Set to true if headless
         }.items()
     )
 
-    gzclient_cmd = IncludeLaunchDescription(
+    gzclient_cmd = IncludeLaunchDescription( # Comment out if headless
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
         )
@@ -70,7 +71,7 @@ def generate_launch_description():
 
     # Add the commands to the launch description
     ld.add_action(gzserver_cmd)
-    ld.add_action(gzclient_cmd)
+    ld.add_action(gzclient_cmd) # Comment out if headless
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(spawn_turtlebot_cmd)
 

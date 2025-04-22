@@ -1,0 +1,26 @@
+[0.049s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4
+[0.184s] [35m[1mConsolidate compiler generated dependencies of target contact_plugin[0m
+[0.277s] [ 50%] [32mBuilding CXX object CMakeFiles/contact_plugin.dir/src/contact_plugin.cpp.o[0m
+[14.302s] [100%] [32m[1mLinking CXX shared library libcontact_plugin.so[0m
+[14.874s] [100%] Built target contact_plugin
+[14.889s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '0': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4
+[14.892s] Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/contact_plugin
+[14.902s] -- Install configuration: ""
+[14.903s] -- Installing: /home/emma/turtlebot3_rl_ws/install/contact_plugin/lib/libcontact_plugin.so
+[14.909s] -- Set runtime path of "/home/emma/turtlebot3_rl_ws/install/contact_plugin/lib/libcontact_plugin.so" to ""
+[14.909s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/ament_index/resource_index/package_run_dependencies/contact_plugin
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/ament_index/resource_index/parent_prefix_path/contact_plugin
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/environment/ament_prefix_path.sh
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/environment/ament_prefix_path.dsv
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/environment/path.sh
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/environment/path.dsv
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/local_setup.bash
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/local_setup.sh
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/local_setup.zsh
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/local_setup.dsv
+[14.911s] -- Installing: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/package.dsv
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/ament_index/resource_index/packages/contact_plugin
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/cmake/contact_pluginConfig.cmake
+[14.911s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/cmake/contact_pluginConfig-version.cmake
+[14.912s] -- Up-to-date: /home/emma/turtlebot3_rl_ws/install/contact_plugin/share/contact_plugin/package.xml
+[14.912s] Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '0': /usr/bin/cmake --install /home/emma/turtlebot3_rl_ws/build/contact_plugin

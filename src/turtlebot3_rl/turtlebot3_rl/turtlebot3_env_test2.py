@@ -12,6 +12,7 @@ import random
 import math
 import time
 import os
+import threading
 
 # Convert x, y, z angle to quaternion
 def euler_to_quaternion(roll, pitch, yaw):
@@ -36,9 +37,21 @@ class TrainEnv(gym.Env):
     def __init__(self):
         super(TrainEnv, self).__init__()
 
+        # Clean files that sometimes break when interrupting the program
+        # os.system("sudo rm -rf /dev/shm/fastrtps_* /dev/shm/fastdds*")
+
         # Init ROS
         rclpy.init()
         self.node = Node('train_env_node')
+
+        # Default values
+        self.x = 0
+        self.y = 0
+        self.z = 0
+        self.angle = 0
+
+        self.executor_thread = threading.Thread(target=rclpy.spin, args=(self.node,), daemon=True)
+        self.executor_thread.start()
 
         # Subscribe to hear when bot collides with train
         self.train_collision = False
@@ -80,12 +93,12 @@ class TrainEnv(gym.Env):
         # Observation Space
         self.observation_space = spaces.Box(
             low=np.concatenate((
-                np.array([-10, -3.0, 0, 0.0]),     # pose: x, y, z, angle
-                np.zeros(24)                            # lidar min distances
+                np.array([-10, -3.0, 0, -1.0, -1.0]),
+                np.zeros(24)
             )),
             high=np.concatenate((
-                np.array([100, 3.0, 2.0, 2 * np.pi]), # pose
-                np.full(24, 10.0)                       # lidar max range
+                np.array([100, 3.0, 2.0, 1.0, 1.0]), # pose
+                np.full(24, 3.5)
             )),
             dtype=np.float32
         )
@@ -93,8 +106,10 @@ class TrainEnv(gym.Env):
         # Action space (left, right, forward, stop)
         self.action_space = spaces.Discrete(4)
 
+
     def _collision_callback(self, msg):
         self.train_collision = msg.data
+        # print("COLLISION RECEIVED IN ENV")
 
     def _train_leaving_cb(self, msg):
         self.train_leaving = msg.data
@@ -111,20 +126,25 @@ class TrainEnv(gym.Env):
             msg.pose.pose.orientation.w
         )
 
+        # print(self.angle)
+
     def _laser_cb(self, msg):
      self.laser_data = np.array(msg.ranges, dtype=np.float32)
+     self.laser_data[np.isinf(self.laser_data)] = 3.5
 
     def get_observation(self):
-        pose_obs = np.array([self.x, self.y, self.z, self.angle], dtype=np.float32)
+        pose_obs = np.array([self.x, self.y, self.z, math.sin(self.angle), math.cos(self.angle)], dtype=np.float32)
         if self.laser_data is not None:
             lidar_obs = np.clip(self.laser_data, 0, 10)  # clip distances for safety
             combined = np.concatenate((pose_obs, lidar_obs))
         else:
             combined = pose_obs
+
         return combined
 
     def reset(self):
-        os.system("ros2 service call /reset_world std_srvs/srv/Empty '{}'")
+        os.system("ros2 service call /pause_physics std_srvs/srv/Empty '{}' > /dev/null 2>&1")
+        os.system("ros2 service call /reset_simulation std_srvs/srv/Empty '{}' > /dev/null 2>&1")
 
         reset_msg = Empty()
         self.reset_pub.publish(reset_msg)
@@ -133,7 +153,7 @@ class TrainEnv(gym.Env):
         # Set a random initial position on the platform's
         self.x = random.uniform(10, 81.75)
         self.y = random.uniform(-2.0, -0.5)
-        self.z = 1.17
+        self.z = 1.151
         self.angle = random.uniform(0, 2 * np.pi)
 
         pose = Pose()
@@ -148,7 +168,7 @@ class TrainEnv(gym.Env):
         pose.orientation.w = qw
 
         self.bot_pose_pub.publish(pose)
-        self.node.get_logger().info(f"Published new bot position {pose} /set_bot_position")
+        # self.node.get_logger().info(f"Published new bot position {pose} /set_bot_position")
         
         self.distance_to_goal = abs(self.y - 2)
         self.prev_distance_to_goal = abs(self.y - 2)
@@ -156,15 +176,23 @@ class TrainEnv(gym.Env):
         self.train_leaving = False
         self.train_collision = False
 
-        time.sleep(10)
+        self.ignore_collision_until = time.time() + 1.0
+
+        time.sleep(0.1)
+
+        os.system("ros2 service call /unpause_physics std_srvs/srv/Empty '{}' > /dev/null 2>&1")
+
+        time.sleep(0.1)
 
         start_train_msg = Empty()
         self.start_train_pub.publish(start_train_msg)
-        self.node.get_logger().info("Published reset message to /train/start")
+        self.node.get_logger().info("Published start message to /train/start")
         
         return self.get_observation()
 
     def step(self, action):
+        rclpy.spin_once(self.node, timeout_sec=0.01)
+
         msg = Twist()
         
         if action == 0: # Move forward
@@ -183,45 +211,45 @@ class TrainEnv(gym.Env):
         # Publish the velocity command
         self.cmd_vel_pub.publish(msg)
 
-        rclpy.spin_once(self.node, timeout_sec=0.1)
+        # rclpy.spin_once(self.node, timeout_sec=0.1)
 
         # Compute distance to goal
         distance_to_goal = abs(self.y - 2)
         reward = 0
         done = False
 
-        if distance_to_goal > self.prev_distance_to_goal:
-            reward = (self.prev_distance_to_goal - distance_to_goal) * 20
-            # print("[RL]: Moving away from goal.")
-        elif distance_to_goal < self.prev_distance_to_goal:
-            reward = (self.prev_distance_to_goal - distance_to_goal) * 10
-            # print("[RL]: Moving towards goal.")
+        reward += (self.prev_distance_to_goal - distance_to_goal) * 5.0
 
         # Lower reward if close to hitting something
-        if np.min(self.laser_data) < 0.3:
-            reward -= 2
+        if np.min(self.laser_data) < 0.3 and np.sum(self.laser_data) > 0:
+            reward -= (0.3 - np.min(self.laser_data)) * 10
+            print("[RL]: CLOSE TO WALL")
 
+        # Higher reward for facing goal
+        facing_goal_reward = -math.cos((self.angle + math.pi/2 + math.pi) % (2 * math.pi) - math.pi)
+        reward += facing_goal_reward
+        # print(f"Facing Reward: {facing_goal_reward}")
 
         self.prev_distance_to_goal = distance_to_goal
 
         # Check failure conditions
         if self.z < 1:
-            reward = -1000
+            reward += -1000 - distance_to_goal
             done = True
             print("[RL]: Bot Fell! (Z<1)")
         elif self.check_collision():
-            reward = -1000
+            reward += -1000 - distance_to_goal
             done = True
             print("[RL]: COLLISION DETECTED!")
 
         # Check success condition (train boarded)
         elif 1 <= self.y <= 3:
-            reward = 10000
+            reward += 10000
             done = True
-            print("[RL]: TRAIN BOARDED!")
+            print("[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!")
 
         elif self.train_leaving:
-            reward = -100
+            reward += -100 - distance_to_goal
             done = True
             print("[RL]: FAILED TO BOARD TRAIN BEFORE DOORS CLOSED!")
         
@@ -239,14 +267,20 @@ class TrainEnv(gym.Env):
         rclpy.shutdown()
 
     def check_collision(self):
+        # Prevent weird behavior upon reset
+        if time.time() < self.ignore_collision_until:
+            self.train_collision = False
+            return False
+
         # Bot collides with something (Poorly named from previous implementation)
         if self.train_collision:
             print("[RL]: Collision flag from /train/collision")
+            self.train_collision = False
             return True
 
         # Collision with platform wall
-        if self.y < -2.5:
-            print(f"[RL]: Collision with platform wall ({self.y:.2f} < -2.75)")
+        if self.y < -2.6:
+            print(f"[RL]: Collision with platform wall ({self.y:.4f} < -2.5)")
             return True
 
         return False

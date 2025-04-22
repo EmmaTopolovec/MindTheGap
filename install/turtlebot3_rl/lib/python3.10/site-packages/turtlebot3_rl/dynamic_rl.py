@@ -6,21 +6,37 @@ from datetime import datetime
 # Create the environment
 env = TrainEnv()
 
-# # Create RL model
+# Create RL model
 # model = PPO("MlpPolicy", env, verbose=1)
 
-model = DQN(
+model = PPO(
     "MlpPolicy",
     env,
-    learning_rate=1e-3,         # faster learning
-    buffer_size=10000,          # replay buffer size
-    learning_starts=1000,       # wait before starting training
-    batch_size=64,
-    verbose=1
+    verbose=1,
+    learning_rate=3e-4,
+    n_steps=1024,
+    batch_size=32,
+    n_epochs=10,
+    gamma=0.99,
+    gae_lambda=0.95,
+    clip_range=0.2,
+    ent_coef=0.01,
+    vf_coef=0.5,
+    max_grad_norm=0.5,
 )
 
+# model = DQN(
+#     "MlpPolicy",
+#     env,
+#     learning_rate=1e-3,
+#     buffer_size=10000,
+#     learning_starts=1000,
+#     batch_size=64,
+#     verbose=1
+# )
+
 # Train the model
-model.learn(total_timesteps=10_000)
+model.learn(total_timesteps=100_000)
 
 # Save the model
 model_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

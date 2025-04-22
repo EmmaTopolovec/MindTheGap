@@ -14,16 +14,15 @@ model = PPO(
     env,
     verbose=1,
     learning_rate=3e-4,
-    n_steps=2048,
-    batch_size=64,
+    n_steps=1024,
+    batch_size=32,
     n_epochs=10,
     gamma=0.99,
     gae_lambda=0.95,
     clip_range=0.2,
-    ent_coef=0.01,  # encourage exploration
+    ent_coef=0.01,
     vf_coef=0.5,
     max_grad_norm=0.5,
-    tensorboard_log="./ppo_turtle_log/"
 )
 
 # model = DQN(
@@ -37,7 +36,7 @@ model = PPO(
 # )
 
 # Train the model
-model.learn(total_timesteps=10_000)
+model.learn(total_timesteps=100_000)
 
 # Save the model
 model_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
