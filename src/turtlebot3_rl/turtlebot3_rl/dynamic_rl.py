@@ -36,7 +36,7 @@ model = PPO(
 # )
 
 # Train the model
-model.learn(total_timesteps=10_000_000)
+model.learn(total_timesteps=20_000)
 
 # Save the model
 model_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

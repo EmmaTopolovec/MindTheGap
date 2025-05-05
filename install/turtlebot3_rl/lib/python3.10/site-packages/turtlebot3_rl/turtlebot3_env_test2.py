@@ -8,12 +8,15 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Empty
 from std_msgs.msg import Bool
+from rclpy.executors import MultiThreadedExecutor
 import random
 import math
 import time
 import os
 import threading
 from rosgraph_msgs.msg import Clock
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
+from rclpy.callback_groups import ReentrantCallbackGroup
 
 # Convert x, y, z angle to quaternion
 def euler_to_quaternion(roll, pitch, yaw):
@@ -45,6 +48,8 @@ class TrainEnv(gym.Env):
         rclpy.init()
         self.node = Node('train_env_node')
 
+        my_callback_group = ReentrantCallbackGroup()
+
         self.sim_time = 0.0
 
         # Default values
@@ -53,11 +58,26 @@ class TrainEnv(gym.Env):
         self.z = 0
         self.angle = 0
 
-        self.executor_thread = threading.Thread(target=rclpy.spin, args=(self.node,), daemon=True)
-        self.executor_thread.start()
+        # self.executor = MultiThreadedExecutor()
+        # self.executor.add_node(self.node)
+        # self.executor_thread = threading.Thread(target=self.executor.spin, daemon=True)
+        # self.executor_thread.start()
 
         # Subscribe to get sim time
-        self.node.create_subscription(Clock, '/clock', self._clock_callback, 10)
+        qos_profile = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+
+        self.node.create_subscription(
+            Clock,
+            '/clock',
+            self._clock_callback,
+            qos_profile,
+            callback_group=my_callback_group
+        )
+
 
         # Subscribe to hear when bot collides with train
         self.train_collision = False
@@ -65,7 +85,8 @@ class TrainEnv(gym.Env):
             Bool,
             '/train/collision',
             self._collision_callback,
-            10
+            10,
+            callback_group=my_callback_group
         )
 
         # Send velocity commands publisher
@@ -82,10 +103,22 @@ class TrainEnv(gym.Env):
 
         # Subscribe to hear when train leaves (reset sim)
         self.train_leaving = False
-        self.node.create_subscription(Bool, '/train/leaving', self._train_leaving_cb, 10)
+        self.node.create_subscription(
+            Bool, 
+            '/train/leaving', 
+            self._train_leaving_cb, 
+            10,
+            callback_group=my_callback_group
+        )
 
         # Subscribe to hear odometry for bot position
-        self.node.create_subscription(Odometry, '/odom', self._odom_cb, 10)
+        self.node.create_subscription(
+            Odometry, 
+            '/odom', 
+            self._odom_cb, 
+            10, 
+            callback_group=my_callback_group
+            )
 
         # Subscribe to hear LiDAR data
         self.laser_data = np.zeros(24, dtype=np.float32)
@@ -93,7 +126,8 @@ class TrainEnv(gym.Env):
             LaserScan,
             '/scan',
             self._laser_cb,
-            10
+            10,
+            callback_group=my_callback_group
         )
 
         # Observation Space
@@ -116,12 +150,13 @@ class TrainEnv(gym.Env):
     def _clock_callback(self, msg):
         # Store simulation time (from /clock)
         self.sim_time = msg.clock.sec + msg.clock.nanosec * 1e-9
+        # self.node.get_logger().info(f"[Clock]: sim_time={self.sim_time}")
 
     def get_sim_time(self):
         return self.sim_time
 
     def _collision_callback(self, msg):
-        self.train_collision = msg.data
+        self.train_collision = self.train_collision or msg.data
         # print("COLLISION RECEIVED IN ENV")
 
     def _train_leaving_cb(self, msg):
@@ -164,16 +199,16 @@ class TrainEnv(gym.Env):
         self.node.get_logger().info("Published reset message to /train/reset")
 
         # Set a random initial position on the platform's
-        self.x = random.uniform(10, 81.75)
-        self.y = random.uniform(-2.0, -0.5)
-        self.z = 1.151
-        self.angle = random.uniform(0, 2 * np.pi)
+        # self.x = random.uniform(10, 81.75)
+        # self.y = random.uniform(-2.0, -0.5)
+        # self.z = 1.151
+        # self.angle = random.uniform(0, 2 * np.pi)
 
         # Hard-coded starting position
-        # self.x = 21.5
-        # self.y = -0.5
-        # self.z = 1.151
-        # self.angle = np.pi/2
+        self.x = 21.5
+        self.y = -0.5
+        self.z = 1.151
+        self.angle = np.pi/2
 
         pose = Pose()
         pose.position.x = self.x
@@ -210,7 +245,7 @@ class TrainEnv(gym.Env):
         return self.get_observation()
 
     def step(self, action):
-        rclpy.spin_once(self.node, timeout_sec=0.01)
+        rclpy.spin_once(self.node, timeout_sec=0.001)
 
         msg = Twist()
         

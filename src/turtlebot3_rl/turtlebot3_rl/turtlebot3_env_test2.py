@@ -8,6 +8,7 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Empty
 from std_msgs.msg import Bool
+from rclpy.executors import MultiThreadedExecutor
 import random
 import math
 import time
@@ -51,13 +52,17 @@ class TrainEnv(gym.Env):
 
         self.sim_time = 0.0
 
+        self.last_reset_time = 0
+
         # Default values
         self.x = 0
         self.y = 0
         self.z = 0
         self.angle = 0
 
-        self.executor_thread = threading.Thread(target=rclpy.spin, args=(self.node,), daemon=True)
+        self.executor = MultiThreadedExecutor()
+        self.executor.add_node(self.node)
+        self.executor_thread = threading.Thread(target=self.executor.spin, daemon=True)
         self.executor_thread.start()
 
         # Subscribe to get sim time
@@ -74,6 +79,8 @@ class TrainEnv(gym.Env):
             qos_profile,
             callback_group=my_callback_group
         )
+
+        self.lock = threading.Lock()
 
 
         # Subscribe to hear when bot collides with train
@@ -141,8 +148,8 @@ class TrainEnv(gym.Env):
         )
 
         # Action space (left, right, forward, stop)
-        self.action_space = spaces.Discrete(4)
-        # self.action_space = spaces.Discrete(2)
+        # self.action_space = spaces.Discrete(4)
+        self.action_space = spaces.Discrete(2)
 
     def _clock_callback(self, msg):
         # Store simulation time (from /clock)
@@ -150,46 +157,65 @@ class TrainEnv(gym.Env):
         # self.node.get_logger().info(f"[Clock]: sim_time={self.sim_time}")
 
     def get_sim_time(self):
-        return self.sim_time
+        with self.lock:
+            return self.sim_time
 
     def _collision_callback(self, msg):
-        self.train_collision = msg.data
-        # print("COLLISION RECEIVED IN ENV")
+        with self.lock:
+            self.train_collision = self.train_collision or msg.data
+            # print("COLLISION RECEIVED IN ENV")
 
     def _train_leaving_cb(self, msg):
-        self.train_leaving = msg.data
+        with self.lock:
+            self.train_leaving = msg.data
 
     def _odom_cb(self, msg):
-        self.x = msg.pose.pose.position.x
-        self.y = msg.pose.pose.position.y
-        self.z = msg.pose.pose.position.z
+        with self.lock:
+            self.x = msg.pose.pose.position.x
+            self.y = msg.pose.pose.position.y
+            self.z = msg.pose.pose.position.z
 
-        self.angle = quaternion_to_yaw(
-            msg.pose.pose.orientation.x,
-            msg.pose.pose.orientation.y,
-            msg.pose.pose.orientation.z,
-            msg.pose.pose.orientation.w
-        )
+            self.angle = quaternion_to_yaw(
+                msg.pose.pose.orientation.x,
+                msg.pose.pose.orientation.y,
+                msg.pose.pose.orientation.z,
+                msg.pose.pose.orientation.w
+            )
 
-        # print(self.angle)
+            # print(self.angle)
 
     def _laser_cb(self, msg):
-     self.laser_data = np.array(msg.ranges, dtype=np.float32)
-     self.laser_data[np.isinf(self.laser_data)] = 3.5
+     with self.lock:
+        self.laser_data = np.array(msg.ranges, dtype=np.float32)
+        self.laser_data[np.isinf(self.laser_data)] = 3.5
 
     def get_observation(self):
-        pose_obs = np.array([self.x, self.y, self.z, math.sin(self.angle), math.cos(self.angle)], dtype=np.float32)
-        if self.laser_data is not None:
-            lidar_obs = np.clip(self.laser_data, 0, 10)  # clip distances for safety
-            combined = np.concatenate((pose_obs, lidar_obs))
-        else:
-            combined = pose_obs
+        with self.lock:
+            pose_obs = np.array([self.x, self.y, self.z, math.sin(self.angle), math.cos(self.angle)], dtype=np.float32)
+            if self.laser_data is not None:
+                lidar_obs = np.clip(self.laser_data, 0, 10)  # clip distances for safety
+                combined = np.concatenate((pose_obs, lidar_obs))
+            else:
+                combined = pose_obs
 
-        return combined
+            return combined
 
     def reset(self):
+        self.last_reset_time = time.time()
+
+        print("Resetting...")
+
         os.system("ros2 service call /pause_physics std_srvs/srv/Empty '{}' > /dev/null 2>&1")
+        time.sleep(0.5)
+
+        msg = Twist()
+        msg.linear.x = 0.0
+        msg.angular.z = 0.0
+        self.cmd_vel_pub.publish(msg)
+        time.sleep(0.5)
+
         os.system("ros2 service call /reset_simulation std_srvs/srv/Empty '{}' > /dev/null 2>&1")
+        time.sleep(0.5)
 
         reset_msg = Empty()
         self.reset_pub.publish(reset_msg)
@@ -202,8 +228,13 @@ class TrainEnv(gym.Env):
         # self.angle = random.uniform(0, 2 * np.pi)
 
         # Hard-coded starting position
-        self.x = 21.5
-        self.y = -0.5
+        # self.x = 21.5
+        # self.y = -0.5
+        # self.z = 1.151
+        # self.angle = np.pi/2
+
+        self.x = 10.0
+        self.y = -2.0
         self.z = 1.151
         self.angle = np.pi/2
 
@@ -242,29 +273,34 @@ class TrainEnv(gym.Env):
         return self.get_observation()
 
     def step(self, action):
-        rclpy.spin_once(self.node, timeout_sec=0.01)
+        # rclpy.spin_once(self.node, timeout_sec=0.001)
+
+        now = time.time()
+        if now - self.last_reset_time < 2.0:
+            # Prevent duplicate resets
+            return self.get_observation(), 0, True, {}
 
         msg = Twist()
         
-        if action == 0: # Move forward
-            msg.linear.x = 0.9
-            msg.angular.z = 0.0
-        elif action == 1: # Turn left
-            msg.linear.x = 0.0
-            msg.angular.z = 0.5
-        elif action == 2: # Turn right
-            msg.linear.x = 0.0
-            msg.angular.z = -0.5
-        elif action == 3: # Stop
-            msg.linear.x = 0.0
-            msg.angular.z = 0.0
-
         # if action == 0: # Move forward
         #     msg.linear.x = 0.9
         #     msg.angular.z = 0.0
-        # elif action == 1: # TStop
+        # elif action == 1: # Turn left
+        #     msg.linear.x = 0.0
+        #     msg.angular.z = 0.5
+        # elif action == 2: # Turn right
+        #     msg.linear.x = 0.0
+        #     msg.angular.z = -0.5
+        # elif action == 3: # Stop
         #     msg.linear.x = 0.0
         #     msg.angular.z = 0.0
+
+        if action == 0: # Move forward
+            msg.linear.x = 0.9
+            msg.angular.z = 0.0
+        elif action == 1: # Stop
+            msg.linear.x = 0.0
+            msg.angular.z = 0.0
 
         # Publish the velocity command
         self.cmd_vel_pub.publish(msg)
@@ -284,32 +320,29 @@ class TrainEnv(gym.Env):
             print("[RL]: CLOSE TO WALL")
 
         # Higher reward for facing goal
-        facing_goal_reward = -math.cos((self.angle + math.pi/2 + math.pi) % (2 * math.pi) - math.pi)
-        reward += facing_goal_reward
+        # facing_goal_reward = -math.cos((self.angle + math.pi/2 + math.pi) % (2 * math.pi) - math.pi)
+        # reward += facing_goal_reward
         # print(f"Facing Reward: {facing_goal_reward}")
 
         self.prev_distance_to_goal = distance_to_goal
 
-        # Check failure conditions
+        # Check success/failure conditions
         if self.z < 1:
-            reward += -1000 - distance_to_goal
+            reward += -10000 - distance_to_goal
             done = True
             print("[RL]: Bot Fell! (Z<1)")
-        elif self.check_collision():
-            reward += -1000 - distance_to_goal
-            done = True
-            print("[RL]: COLLISION DETECTED!")
-
-        # Check success condition (train boarded)
         elif 1 <= self.y <= 3:
-            reward += 10000
+            reward += 100000
             done = True
             print("[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!")
-
+        elif self.check_collision():
+            reward += -10000 - distance_to_goal
+            done = True
+            print("[RL]: COLLISION DETECTED!")
         elif self.train_leaving:
             if time.time() < self.ignore_collision_until:
                 self.train_leaving = False
-            reward += -100 - distance_to_goal
+            reward += -1000 - distance_to_goal
             done = True
             print("[RL]: FAILED TO BOARD TRAIN BEFORE DOORS CLOSED!")
         
@@ -327,21 +360,22 @@ class TrainEnv(gym.Env):
         rclpy.shutdown()
 
     def check_collision(self):
-        # Prevent weird behavior upon reset
-        if time.time() < self.ignore_collision_until:
-            self.train_collision = False
-            return False
+        with self.lock:
+            # Prevent weird behavior upon reset
+            if time.time() < self.ignore_collision_until:
+                self.train_collision = False
+                return False
 
-        # Bot collides with something (Poorly named from previous implementation)
-        if self.train_collision:
-            print("[RL]: Collision flag from /train/collision")
-            self.train_collision = False
-            return True
+            # Bot collides with something (Poorly named from previous implementation)
+            if self.train_collision:
+                print("[RL]: Collision flag from /train/collision")
+                self.train_collision = False
+                return True
 
-        # Collision with platform wall
-        if self.y < -2.6:
-            print(f"[RL]: Collision with platform wall ({self.y:.4f} < -2.5)")
-            return True
+            # Collision with platform wall
+            if self.y < -2.6:
+                print(f"[RL]: Collision with platform wall ({self.y:.4f} < -2.5)")
+                return True
 
         return False
 
