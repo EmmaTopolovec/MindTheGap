@@ -14,6 +14,7 @@ test/test_flake8.py
 test/test_pep257.py
 turtlebot3_rl/__init__.py
 turtlebot3_rl/dynamic_rl.py
+turtlebot3_rl/teleop.py
 turtlebot3_rl/train.py
 turtlebot3_rl/train_test.py
 turtlebot3_rl/turtlebot3_dynamic_env.py

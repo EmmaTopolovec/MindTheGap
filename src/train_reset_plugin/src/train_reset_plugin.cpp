@@ -5,6 +5,8 @@
 #include <std_msgs/msg/empty.hpp>
 #include "std_msgs/msg/bool.hpp"
 #include <thread>
+#include <gazebo/transport/transport.hh>
+#include <gazebo/msgs/msgs.hh>
 
 namespace gazebo
 {
@@ -22,10 +24,47 @@ namespace gazebo
 
       link->SetWorldPose(current_pose);
     }
+
+    void SpawnInvisibleTrain()
+    {
+      RCLCPP_INFO(ros_node_->get_logger(), "SPAWNING STATIC TRAIN...");
+      if (invisible_train_spawned_) {
+        RCLCPP_INFO(ros_node_->get_logger(), "STATIC TRAIN ALREADY SPAWNED.");
+        return;
+      }
+
+      gazebo::msgs::Factory msg;
+      msg.set_sdf_filename("model://invisible_train");
+      gazebo::msgs::Set(msg.mutable_pose(), ignition::math::Pose3d(0, 0, 0.0, 0, 0, 0));  // Adjust position as needed
+      RCLCPP_INFO(ros_node_->get_logger(), "PUBLISHING MESSAGE TO SPAWN STATIC TRAIN.");
+      factory_pub_->Publish(msg);
+      invisible_train_spawned_ = true;
+    }
+    
+    void DeleteInvisibleTrain()
+    {
+      RCLCPP_INFO(ros_node_->get_logger(), "DELETING STATIC TRAIN...");
+      if (!invisible_train_spawned_) {
+        RCLCPP_INFO(ros_node_->get_logger(), "STATIC TRAIN ALREADY DELETED.");
+        return;
+      }
+    
+      auto delete_msg = gazebo::msgs::CreateRequest("entity_delete", "invisible_train");
+      RCLCPP_INFO(ros_node_->get_logger(), "PUBLISHING MESSAGE TO DELETE STATIC TRAIN.");
+
+      request_pub_->Publish(*delete_msg);
+      invisible_train_spawned_ = false;
+    }
     
     void Load(physics::ModelPtr model, sdf::ElementPtr /*sdf*/) override
     {
       model_ = model;
+
+      gz_node_ = gazebo::transport::NodePtr(new gazebo::transport::Node());
+      gz_node_->Init(model_->GetWorld()->Name());
+      factory_pub_ = gz_node_->Advertise<gazebo::msgs::Factory>("~/factory");
+      request_pub_ = gz_node_->Advertise<gazebo::msgs::Request>("~/request");
+
 
       if (!rclcpp::ok())
         rclcpp::init(0, nullptr);
@@ -35,21 +74,21 @@ namespace gazebo
       train_leaving_pub_ = ros_node_->create_publisher<std_msgs::msg::Bool>("/train/leaving", 10);
 
       solid_train_link_ = model_->GetLink("solid_train_link");
-      train_link_ = model_->GetLink("train_link");
+      // train_link_ = model_->GetLink("train_link");
       left_door_link_ = model_->GetLink("left_link");
       right_door_link_ = model_->GetLink("right_link");
 
-      if (!solid_train_link_ || !train_link_ || !left_door_link_ || !right_door_link_)
-      {
-        RCLCPP_ERROR(ros_node_->get_logger(), "One or more required links not found in the model.");
-        return;
-      }
+      // if (!solid_train_link_ || !train_link_ || !left_door_link_ || !right_door_link_)
+      // {
+      //   RCLCPP_ERROR(ros_node_->get_logger(), "One or more required links not found in the model.");
+      //   return;
+      // }
 
-      MoveUp(train_link_);
+      // MoveUp(train_link_);
       MoveUp(left_door_link_);
       MoveUp(right_door_link_);
 
-      train_link_->SetKinematic(true);
+      // train_link_->SetKinematic(true);
       left_door_link_->SetKinematic(true);
       right_door_link_->SetKinematic(true);
 
@@ -77,19 +116,21 @@ namespace gazebo
       active_ = false;
       door_state_ = 0;
 
-      MoveUp(train_link_);
+      DeleteInvisibleTrain();
+
+      // MoveUp(train_link_);
       MoveUp(left_door_link_);
       MoveUp(right_door_link_);
 
-      train_link_->SetLinearVel({0, 0, 0});
+      // train_link_->SetLinearVel({0, 0, 0});
       left_door_link_->SetLinearVel({0, 0, 0});
       right_door_link_->SetLinearVel({0, 0, 0});
 
-      train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+      // train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
       left_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
       right_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
 
-      train_link_->SetKinematic(true);
+      // train_link_->SetKinematic(true);
       left_door_link_->SetKinematic(true);
       right_door_link_->SetKinematic(true);
 
@@ -137,19 +178,21 @@ namespace gazebo
           solid_train_link_->SetKinematic(true);
 
           // Show stationary train
-          train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
-          left_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
-          right_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
+          // train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
+          left_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
+          right_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
 
-          train_link_->SetKinematic(true);
+          // train_link_->SetKinematic(true);
           left_door_link_->SetKinematic(false);
           right_door_link_->SetKinematic(false);
-          train_link_->SetLinearVel({0, 0, 0});
+          // train_link_->SetLinearVel({0, 0, 0});
           left_door_link_->SetLinearVel({0, 0, 0});
           right_door_link_->SetLinearVel({0, 0, 0});
-          train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+          // train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
           left_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
           right_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+
+          SpawnInvisibleTrain();
 
           door_state_ = 1;
           door_timer_start_ = sim_time;
@@ -168,7 +211,14 @@ namespace gazebo
         double t = (sim_time - door_timer_start_).Double();
         double speed = 0.25;
 
-        if (door_state_ == 1 && t < 1.0) {}
+        if (door_state_ == 1 && t < 1.0) {
+          left_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
+          right_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
+          left_door_link_->SetLinearVel({0, 0, 0});
+          right_door_link_->SetLinearVel({0, 0, 0});
+          left_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+          right_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+        }
         else if (door_state_ == 2)
         {
           if (left_door_link_)
@@ -179,15 +229,15 @@ namespace gazebo
           double moved = std::abs(left_door_link_->WorldPose().Pos().X());
           if (moved >= 0.75)
           {
-            train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
-            left_door_link_->SetWorldPose({-0.75, -0.007, 0.01, 0, 0, 0});
-            right_door_link_->SetWorldPose({0.75, -0.007, 0.01, 0, 0, 0});
+            // train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
+            left_door_link_->SetWorldPose({-0.75, -0.01, 0.01, 0, 0, 0});
+            right_door_link_->SetWorldPose({0.75, -0.01, 0.01, 0, 0, 0});
 
-            train_link_->SetLinearVel({0, 0, 0});
+            // train_link_->SetLinearVel({0, 0, 0});
             left_door_link_->SetLinearVel({0, 0, 0});
             right_door_link_->SetLinearVel({0, 0, 0});
 
-            train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+            // train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
             left_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
             right_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
 
@@ -196,7 +246,7 @@ namespace gazebo
             RCLCPP_INFO(ros_node_->get_logger(), "Doors opened. Mind the gap!");
           }
         }
-        else if (door_state_ == 3 && t < 15.0) {}
+        else if (door_state_ == 3 && t < 5.0) {}
         else if (door_state_ == 4)
         {
           if (left_door_link_)
@@ -207,15 +257,15 @@ namespace gazebo
           double moved = std::abs(left_door_link_->WorldPose().Pos().X());
           if (moved <= 0.01)
           {
-            train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
-            left_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
-            right_door_link_->SetWorldPose({0, -0.007, 0.01, 0, 0, 0});
+            // train_link_->SetWorldPose({0, 0.005, 0, 0, 0, 0});
+            left_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
+            right_door_link_->SetWorldPose({0, -0.01, 0.01, 0, 0, 0});
 
-            train_link_->SetLinearVel({0, 0, 0});
+            // train_link_->SetLinearVel({0, 0, 0});
             left_door_link_->SetLinearVel({0, 0, 0});
             right_door_link_->SetLinearVel({0, 0, 0});
 
-            train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+            // train_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
             left_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
             right_door_link_->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
 
@@ -252,9 +302,15 @@ namespace gazebo
 
     physics::ModelPtr model_;
     physics::LinkPtr solid_train_link_;
-    physics::LinkPtr train_link_;
+    // physics::LinkPtr train_link_;
     physics::LinkPtr left_door_link_;
     physics::LinkPtr right_door_link_;
+
+    gazebo::transport::NodePtr gz_node_;
+    gazebo::transport::PublisherPtr factory_pub_;
+    gazebo::transport::PublisherPtr request_pub_;
+    bool invisible_train_spawned_ = false;
+
 
     event::ConnectionPtr update_connection_;
 

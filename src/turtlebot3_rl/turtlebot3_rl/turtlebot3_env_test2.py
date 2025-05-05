@@ -13,6 +13,9 @@ import math
 import time
 import os
 import threading
+from rosgraph_msgs.msg import Clock
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
+from rclpy.callback_groups import ReentrantCallbackGroup
 
 # Convert x, y, z angle to quaternion
 def euler_to_quaternion(roll, pitch, yaw):
@@ -44,6 +47,10 @@ class TrainEnv(gym.Env):
         rclpy.init()
         self.node = Node('train_env_node')
 
+        my_callback_group = ReentrantCallbackGroup()
+
+        self.sim_time = 0.0
+
         # Default values
         self.x = 0
         self.y = 0
@@ -53,13 +60,30 @@ class TrainEnv(gym.Env):
         self.executor_thread = threading.Thread(target=rclpy.spin, args=(self.node,), daemon=True)
         self.executor_thread.start()
 
+        # Subscribe to get sim time
+        qos_profile = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+
+        self.node.create_subscription(
+            Clock,
+            '/clock',
+            self._clock_callback,
+            qos_profile,
+            callback_group=my_callback_group
+        )
+
+
         # Subscribe to hear when bot collides with train
         self.train_collision = False
         self.node.create_subscription(
             Bool,
             '/train/collision',
             self._collision_callback,
-            10
+            10,
+            callback_group=my_callback_group
         )
 
         # Send velocity commands publisher
@@ -76,10 +100,22 @@ class TrainEnv(gym.Env):
 
         # Subscribe to hear when train leaves (reset sim)
         self.train_leaving = False
-        self.node.create_subscription(Bool, '/train/leaving', self._train_leaving_cb, 10)
+        self.node.create_subscription(
+            Bool, 
+            '/train/leaving', 
+            self._train_leaving_cb, 
+            10,
+            callback_group=my_callback_group
+        )
 
         # Subscribe to hear odometry for bot position
-        self.node.create_subscription(Odometry, '/odom', self._odom_cb, 10)
+        self.node.create_subscription(
+            Odometry, 
+            '/odom', 
+            self._odom_cb, 
+            10, 
+            callback_group=my_callback_group
+            )
 
         # Subscribe to hear LiDAR data
         self.laser_data = np.zeros(24, dtype=np.float32)
@@ -87,7 +123,8 @@ class TrainEnv(gym.Env):
             LaserScan,
             '/scan',
             self._laser_cb,
-            10
+            10,
+            callback_group=my_callback_group
         )
 
         # Observation Space
@@ -105,7 +142,15 @@ class TrainEnv(gym.Env):
 
         # Action space (left, right, forward, stop)
         self.action_space = spaces.Discrete(4)
+        # self.action_space = spaces.Discrete(2)
 
+    def _clock_callback(self, msg):
+        # Store simulation time (from /clock)
+        self.sim_time = msg.clock.sec + msg.clock.nanosec * 1e-9
+        # self.node.get_logger().info(f"[Clock]: sim_time={self.sim_time}")
+
+    def get_sim_time(self):
+        return self.sim_time
 
     def _collision_callback(self, msg):
         self.train_collision = msg.data
@@ -151,10 +196,16 @@ class TrainEnv(gym.Env):
         self.node.get_logger().info("Published reset message to /train/reset")
 
         # Set a random initial position on the platform's
-        self.x = random.uniform(10, 81.75)
-        self.y = random.uniform(-2.0, -0.5)
+        # self.x = random.uniform(10, 81.75)
+        # self.y = random.uniform(-2.0, -0.5)
+        # self.z = 1.151
+        # self.angle = random.uniform(0, 2 * np.pi)
+
+        # Hard-coded starting position
+        self.x = 21.5
+        self.y = -0.5
         self.z = 1.151
-        self.angle = random.uniform(0, 2 * np.pi)
+        self.angle = np.pi/2
 
         pose = Pose()
         pose.position.x = self.x
@@ -208,6 +259,13 @@ class TrainEnv(gym.Env):
             msg.linear.x = 0.0
             msg.angular.z = 0.0
 
+        # if action == 0: # Move forward
+        #     msg.linear.x = 0.9
+        #     msg.angular.z = 0.0
+        # elif action == 1: # TStop
+        #     msg.linear.x = 0.0
+        #     msg.angular.z = 0.0
+
         # Publish the velocity command
         self.cmd_vel_pub.publish(msg)
 
@@ -215,7 +273,7 @@ class TrainEnv(gym.Env):
 
         # Compute distance to goal
         distance_to_goal = abs(self.y - 2)
-        reward = 0
+        reward = 5
         done = False
 
         reward += (self.prev_distance_to_goal - distance_to_goal) * 5.0
@@ -249,6 +307,8 @@ class TrainEnv(gym.Env):
             print("[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!")
 
         elif self.train_leaving:
+            if time.time() < self.ignore_collision_until:
+                self.train_leaving = False
             reward += -100 - distance_to_goal
             done = True
             print("[RL]: FAILED TO BOARD TRAIN BEFORE DOORS CLOSED!")

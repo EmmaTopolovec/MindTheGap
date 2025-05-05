@@ -13,6 +13,7 @@ import math
 import time
 import os
 import threading
+from rosgraph_msgs.msg import Clock
 
 # Convert x, y, z angle to quaternion
 def euler_to_quaternion(roll, pitch, yaw):
@@ -44,8 +45,19 @@ class TrainEnv(gym.Env):
         rclpy.init()
         self.node = Node('train_env_node')
 
+        self.sim_time = 0.0
+
+        # Default values
+        self.x = 0
+        self.y = 0
+        self.z = 0
+        self.angle = 0
+
         self.executor_thread = threading.Thread(target=rclpy.spin, args=(self.node,), daemon=True)
         self.executor_thread.start()
+
+        # Subscribe to get sim time
+        self.node.create_subscription(Clock, '/clock', self._clock_callback, 10)
 
         # Subscribe to hear when bot collides with train
         self.train_collision = False
@@ -87,11 +99,11 @@ class TrainEnv(gym.Env):
         # Observation Space
         self.observation_space = spaces.Box(
             low=np.concatenate((
-                np.array([-10, -3.0, 0, 0.0]),
+                np.array([-10, -3.0, 0, -1.0, -1.0]),
                 np.zeros(24)
             )),
             high=np.concatenate((
-                np.array([100, 3.0, 2.0, 2 * np.pi]), # pose
+                np.array([100, 3.0, 2.0, 1.0, 1.0]), # pose
                 np.full(24, 3.5)
             )),
             dtype=np.float32
@@ -99,39 +111,14 @@ class TrainEnv(gym.Env):
 
         # Action space (left, right, forward, stop)
         self.action_space = spaces.Discrete(4)
+        # self.action_space = spaces.Discrete(2)
 
-        self.test_rotation()
+    def _clock_callback(self, msg):
+        # Store simulation time (from /clock)
+        self.sim_time = msg.clock.sec + msg.clock.nanosec * 1e-9
 
-    def test_rotation(self, rotate_left=True):
-
-        print("[TEST] Starting rotation test...")
-
-        for i in range(10):
-            # Print current angle in degrees
-            angle_deg = math.degrees(self.angle)
-            print(f"[TEST] Step {i+1}: Current Angle = {angle_deg:.2f} degrees")
-
-            # Create Twist message
-            msg = Twist()
-            msg.linear.x = 0.0
-            msg.angular.z = 0.3 if rotate_left else -0.3
-
-            # Publish the velocity command briefly
-            self.cmd_vel_pub.publish(msg)
-            time.sleep(0.2)  # Let it rotate a bit
-
-            # Stop the robot
-            stop_msg = Twist()
-            stop_msg.linear.x = 0.0
-            stop_msg.angular.z = 0.0
-            self.cmd_vel_pub.publish(stop_msg)
-
-            # Give time for odom to update
-            rclpy.spin_once(self.node, timeout_sec=0.05)
-            time.sleep(0.2)
-
-        print("[TEST] Rotation test complete.")
-
+    def get_sim_time(self):
+        return self.sim_time
 
     def _collision_callback(self, msg):
         self.train_collision = msg.data
@@ -152,14 +139,14 @@ class TrainEnv(gym.Env):
             msg.pose.pose.orientation.w
         )
 
-        print(self.angle)
+        # print(self.angle)
 
     def _laser_cb(self, msg):
      self.laser_data = np.array(msg.ranges, dtype=np.float32)
      self.laser_data[np.isinf(self.laser_data)] = 3.5
 
     def get_observation(self):
-        pose_obs = np.array([self.x, self.y, self.z, self.angle], dtype=np.float32)
+        pose_obs = np.array([self.x, self.y, self.z, math.sin(self.angle), math.cos(self.angle)], dtype=np.float32)
         if self.laser_data is not None:
             lidar_obs = np.clip(self.laser_data, 0, 10)  # clip distances for safety
             combined = np.concatenate((pose_obs, lidar_obs))
@@ -181,6 +168,12 @@ class TrainEnv(gym.Env):
         self.y = random.uniform(-2.0, -0.5)
         self.z = 1.151
         self.angle = random.uniform(0, 2 * np.pi)
+
+        # Hard-coded starting position
+        # self.x = 21.5
+        # self.y = -0.5
+        # self.z = 1.151
+        # self.angle = np.pi/2
 
         pose = Pose()
         pose.position.x = self.x
@@ -234,6 +227,13 @@ class TrainEnv(gym.Env):
             msg.linear.x = 0.0
             msg.angular.z = 0.0
 
+        # if action == 0: # Move forward
+        #     msg.linear.x = 0.9
+        #     msg.angular.z = 0.0
+        # elif action == 1: # TStop
+        #     msg.linear.x = 0.0
+        #     msg.angular.z = 0.0
+
         # Publish the velocity command
         self.cmd_vel_pub.publish(msg)
 
@@ -241,7 +241,7 @@ class TrainEnv(gym.Env):
 
         # Compute distance to goal
         distance_to_goal = abs(self.y - 2)
-        reward = 0
+        reward = 5
         done = False
 
         reward += (self.prev_distance_to_goal - distance_to_goal) * 5.0
@@ -252,8 +252,9 @@ class TrainEnv(gym.Env):
             print("[RL]: CLOSE TO WALL")
 
         # Higher reward for facing goal
-        reward += np.dot(np.array([math.cos(self.angle), math.sin(self.angle)]), np.array([0.0, 1.0]))
-        print(f"Reward? {np.dot(np.array([math.cos(self.angle), math.sin(self.angle)]), np.array([0.0, 1.0]))}")
+        facing_goal_reward = -math.cos((self.angle + math.pi/2 + math.pi) % (2 * math.pi) - math.pi)
+        reward += facing_goal_reward
+        # print(f"Facing Reward: {facing_goal_reward}")
 
         self.prev_distance_to_goal = distance_to_goal
 
@@ -274,6 +275,8 @@ class TrainEnv(gym.Env):
             print("[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!\n[RL]: TRAIN BOARDED!")
 
         elif self.train_leaving:
+            if time.time() < self.ignore_collision_until:
+                self.train_leaving = False
             reward += -100 - distance_to_goal
             done = True
             print("[RL]: FAILED TO BOARD TRAIN BEFORE DOORS CLOSED!")
