@@ -1,3 +1,0 @@
-[console_scripts]
-train_control_node = train_controller.train_control_node:main
-
