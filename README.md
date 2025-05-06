@@ -1,10 +1,10 @@
-### Mind the Gap: Autonomous Train Boarding for Mobile Robots
+# Mind the Gap: Autonomous Train Boarding for Mobile Robots
 
-# A basic RL implementation in a novel train platform environment using Gazebo Classic (v11), ROS 2 Humble, OpenAI gym, and stable-baselines3.
+### A basic RL implementation in a novel train platform environment using Gazebo Classic (v11), ROS 2 Humble, OpenAI gym, and stable-baselines3.
 
-# By Emma Topolovec
+### By Emma Topolovec
 
-# Created for Binghamton University, CS 524: Intelligent Mobile Robots
+### Created for Binghamton University, CS 524: Intelligent Mobile Robots
 
 To run Gazebo:
 
