@@ -20,18 +20,4 @@ $ python3 src/turtlebot3_rl/turtlebot3_rl/dynamic_rl.py
 
 ## Project Report
 
-![Page 1]([https://github.com/EmmaTopolovec/MindTheGap/blob/4fb13a2799a7927908ad8513c91dce16db7eed6f/images/Mind%20the%20Gap%20Report%20Page%201.jpg])
-
-![Page 2]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%202.jpg])
-
-![Page 3]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%203.jpg])
-
-![Page 4]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%204.jpg])
-
-![Page 5]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%205.jpg])
-
-![Page 6]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%206.jpg])
-
-![Page 7]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%207.jpg])
-
-![Page 8]([https://github.com/EmmaTopolovec/MindTheGap/blob/b832e870de8e3884e800c5fb61577a8abdc15662/images/Mind%20the%20Gap%20Report%20Page%208.jpg])
+![Page 1]([https://raw.githubusercontent.com/EmmaTopolovec/MindTheGap/refs/heads/master/images/Mind%20the%20Gap%20Report%20Page%201.jpg])
