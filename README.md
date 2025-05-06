@@ -20,4 +20,4 @@ $ python3 src/turtlebot3_rl/turtlebot3_rl/dynamic_rl.py
 
 ## Project Report
 
-![Page 1]([https://raw.githubusercontent.com/EmmaTopolovec/MindTheGap/refs/heads/master/images/Mind%20the%20Gap%20Report%20Page%201.jpg])
+![Page 1](https://raw.githubusercontent.com/EmmaTopolovec/MindTheGap/refs/heads/master/images/Mind%20the%20Gap%20Report%20Page%201.jpg)
