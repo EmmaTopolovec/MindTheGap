@@ -1,4 +1,0 @@
-Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/contact_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/contact_plugin
-Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '0': /usr/bin/cmake /home/emma/turtlebot3_rl_ws/src/contact_plugin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/emma/turtlebot3_rl_ws/install/contact_plugin
-Invoking command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4
-Invoked command in '/home/emma/turtlebot3_rl_ws/build/contact_plugin' returned '2': /usr/bin/cmake --build /home/emma/turtlebot3_rl_ws/build/contact_plugin -- -j4 -l4

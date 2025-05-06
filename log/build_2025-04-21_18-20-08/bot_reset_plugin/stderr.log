@@ -1,8 +1,0 @@
-[01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::BotResetPlugin::SetPositionCallback(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/emma/turtlebot3_rl_ws/src/bot_reset_plugin/src/bot_reset_plugin.cpp:70:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Joint[m[K’ has no member named ‘[01m[KGetDOF[m[K’; did you mean ‘[01m[KGetSDF[m[K’?
-   70 |           int dof = joint->[01;31m[KGetDOF[m[K();
-      |                            [01;31m[K^~~~~~[m[K
-      |                            [32m[KGetSDF[m[K
-gmake[2]: *** [CMakeFiles/bot_reset_plugin.dir/build.make:76: CMakeFiles/bot_reset_plugin.dir/src/bot_reset_plugin.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bot_reset_plugin.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

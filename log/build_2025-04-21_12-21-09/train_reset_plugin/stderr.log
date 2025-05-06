@@ -1,8 +1,0 @@
-[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:[m[K In member function ‘[01m[Kvoid gazebo::TrainResetPlugin::OnUpdate()[m[K’:
-[01m[K/home/emma/turtlebot3_rl_ws/src/train_reset_plugin/src/train_reset_plugin.cpp:136:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::TrainResetPlugin[m[K’ has no member named ‘[01m[Kmodel[m[K’; did you mean ‘[01m[Kmodel_[m[K’?
-  136 |       auto collision = this->[01;31m[Kmodel[m[K->GetLink("your_link_name")->GetCollision("your_collision_name");
-      |                              [01;31m[K^~~~~[m[K
-      |                              [32m[Kmodel_[m[K
-gmake[2]: *** [CMakeFiles/train_reset_plugin.dir/build.make:76: CMakeFiles/train_reset_plugin.dir/src/train_reset_plugin.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/train_reset_plugin.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
