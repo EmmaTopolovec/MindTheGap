@@ -1,4 +1,0 @@
-source;share/train_reset_plugin/local_setup.bash
-source;share/train_reset_plugin/local_setup.dsv
-source;share/train_reset_plugin/local_setup.sh
-source;share/train_reset_plugin/local_setup.zsh
