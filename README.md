@@ -17,3 +17,21 @@ $ ros2 launch my_turtlebot3_gazebo train_world.launch.py
 To train a RL model:
 
 $ python3 src/turtlebot3_rl/turtlebot3_rl/dynamic_rl.py
+
+## Project Report
+
+![Page 1]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%201.jpg])
+
+![Page 2]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%202.jpg])
+
+![Page 3]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%203.jpg])
+
+![Page 4]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%204.jpg])
+
+![Page 5]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%205.jpg])
+
+![Page 6]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%206.jpg])
+
+![Page 7]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%207.jpg])
+
+![Page 8]([https://github.com/EmmaTopolovec/MindTheGap/blob/master/images/Mind%20the%20Gap%20Report%20Page%208.jpg])
