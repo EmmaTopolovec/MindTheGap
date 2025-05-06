@@ -9,7 +9,9 @@
 To run Gazebo:
 
 $ colcon build
+
 $ source install/setup.bash
+
 $ ros2 launch my_turtlebot3_gazebo train_world.launch.py
 
 To train a RL model:
